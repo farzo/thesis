@@ -1,13 +1,30 @@
 \contentsline {chapter}{\numberline {1}Introduction}{5}
 \contentsline {chapter}{\numberline {2}CERN Web Landscape}{7}
-\contentsline {section}{\numberline {2.1}Travaux de Simon Henein}{7}
-\contentsline {subsection}{\numberline {2.1.1}Conception des guidages flexibles}{7}
-\contentsline {subsection}{\numberline {2.1.2}Flexure pivot for aerospace mechanisms \cite {henein}}{8}
-\contentsline {section}{\numberline {2.2}Three-Phase Electrostatic Rotary Stepper Micromotor with a Flexural Pivot Bearing \cite {confidential}}{8}
-\contentsline {section}{\numberline {2.3}Single mask 3-phase electrostatic rotary stepper micromotor \cite {transducers}}{9}
+\contentsline {section}{\numberline {2.1}Current Relevant Tools}{7}
+\contentsline {subsection}{\numberline {2.1.1}WAP or WAD}{7}
+\contentsline {subsubsection}{Wappalyzer}{7}
+\contentsline {section}{\numberline {2.2}Travaux de Simon Henein}{7}
+\contentsline {subsection}{\numberline {2.2.1}Conception des guidages flexibles}{7}
+\contentsline {subsection}{\numberline {2.2.2}Flexure pivot for aerospace mechanisms \cite {henein}}{8}
+\contentsline {section}{\numberline {2.3}Three-Phase Electrostatic Rotary Stepper Micromotor with a Flexural Pivot Bearing \cite {confidential}}{8}
+\contentsline {section}{\numberline {2.4}Single mask 3-phase electrostatic rotary stepper micromotor \cite {transducers}}{9}
 \contentsline {chapter}{\numberline {3}Vulnerability Detection}{11}
 \contentsline {chapter}{\numberline {4}Scanner}{13}
 \contentsline {chapter}{\numberline {5}Vulnerability Notification Tool}{15}
+\contentsline {section}{\numberline {5.1}Motivation}{15}
+\contentsline {section}{\numberline {5.2}Related Work}{15}
+\contentsline {section}{\numberline {5.3}Source Evaluation}{15}
+\contentsline {section}{\numberline {5.4}National Vulnerability Database}{15}
+\contentsline {subsection}{\numberline {5.4.1}Challenges}{15}
+\contentsline {subsubsection}{Modification Date}{15}
+\contentsline {subsection}{\numberline {5.4.2}and/or configuration}{15}
+\contentsline {section}{\numberline {5.5}Product Name Matching}{15}
+\contentsline {subsection}{\numberline {5.5.1}Common Platform Enumerations}{15}
+\contentsline {subsubsection}{Challenges}{15}
+\contentsline {subsection}{\numberline {5.5.2}WAD Product Names}{16}
+\contentsline {subsection}{\numberline {5.5.3}Matching Algorithms}{16}
+\contentsline {subsection}{\numberline {5.5.4}Evaluation of Algorithms}{16}
+\contentsline {section}{\numberline {5.6}Notifications}{16}
 \contentsline {chapter}{\numberline {6}Results}{17}
 \contentsline {chapter}{\numberline {7}Conclusion and Future Work}{19}
 \contentsline {chapter}{\numberline {A}Annexes}{21}
