@@ -1,0 +1,21 @@
+\contentsline {chapter}{\numberline {1}Introduction}{5}
+\contentsline {chapter}{\numberline {2}CERN Web Landscape}{7}
+\contentsline {section}{\numberline {2.1}Travaux de Simon Henein}{7}
+\contentsline {subsection}{\numberline {2.1.1}Conception des guidages flexibles}{7}
+\contentsline {subsection}{\numberline {2.1.2}Flexure pivot for aerospace mechanisms \cite {henein}}{8}
+\contentsline {section}{\numberline {2.2}Three-Phase Electrostatic Rotary Stepper Micromotor with a Flexural Pivot Bearing \cite {confidential}}{8}
+\contentsline {section}{\numberline {2.3}Single mask 3-phase electrostatic rotary stepper micromotor \cite {transducers}}{10}
+\contentsline {chapter}{\numberline {3}Vulnerability Detection}{11}
+\contentsline {chapter}{\numberline {4}Scanner}{13}
+\contentsline {chapter}{\numberline {5}Vulnerability Notification Tool}{15}
+\contentsline {chapter}{\numberline {6}Results}{17}
+\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{19}
+\contentsline {chapter}{\numberline {A}Annexes}{21}
+\contentsline {section}{\numberline {A.1}Conception des masques}{21}
+\contentsline {section}{\numberline {A.2}Constantes physiques et propri\'et\'es des mat\'eriaux}{22}
+\contentsline {section}{\numberline {A.3}Contenu du CD-ROM}{22}
+\contentsline {section}{\numberline {A.4}Processus de fabrication}{23}
+\contentsline {section}{\numberline {A.5}Protocole du processus de fabrication}{23}
+\contentsline {section}{\numberline {A.6}Article en cours d'impression: ``Three-Phase Electrostatic Rotary Stepper Micromotor with a Flexural Pivot Bearing''}{23}
+\contentsline {section}{\numberline {A.7}Article de la conf\'erence Transducers 2009: ``Single mask 3-phase electrostatic rotary stepper micromotor''}{23}
+\contentsline {chapter}{Bibliographie}{20}
