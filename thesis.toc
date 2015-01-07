@@ -1,57 +1,59 @@
 \contentsline {chapter}{\numberline {1}Introduction}{5}
-\contentsline {section}{\numberline {1.1}CERN Web Landscape}{5}
-\contentsline {subsection}{\numberline {1.1.1}Web Application Stack}{5}
-\contentsline {subsection}{\numberline {1.1.2}Centrally Hosted}{5}
-\contentsline {subsection}{\numberline {1.1.3}Non Centrally Hosted}{5}
-\contentsline {section}{\numberline {1.2}CERN Web Security}{6}
-\contentsline {subsection}{\numberline {1.2.1}Prevention}{6}
-\contentsline {subsection}{\numberline {1.2.2}Detection}{6}
+\contentsline {section}{\numberline {1.1}Definitions}{5}
+\contentsline {section}{\numberline {1.2}CERN Web Landscape}{5}
+\contentsline {subsection}{\numberline {1.2.1}Web Application Stack}{5}
+\contentsline {subsection}{\numberline {1.2.2}Centrally Hosted}{5}
+\contentsline {subsection}{\numberline {1.2.3}Non Centrally Hosted}{6}
+\contentsline {section}{\numberline {1.3}CERN Web Security}{6}
+\contentsline {subsection}{\numberline {1.3.1}Prevention}{6}
+\contentsline {subsection}{\numberline {1.3.2}Detection}{6}
 \contentsline {subsubsection}{Detection Scripts}{6}
 \contentsline {subsubsection}{Published Vulnerabilities}{6}
-\contentsline {subsection}{\numberline {1.2.3}Relevant Tools}{6}
-\contentsline {subsubsection}{List of websites and webservers}{6}
-\contentsline {subsubsection}{WAD and Wappalyzer}{6}
-\contentsline {subsubsection}{SSDB?}{6}
-\contentsline {subsubsection}{Auto-notify?}{6}
-\contentsline {section}{\numberline {1.3}Objectives}{6}
-\contentsline {chapter}{\numberline {2}CERN Web Landscape}{9}
-\contentsline {section}{\numberline {2.1}Current Relevant Tools}{9}
-\contentsline {subsection}{\numberline {2.1.1}WAP or WAD}{9}
-\contentsline {subsubsection}{Wappalyzer}{9}
-\contentsline {section}{\numberline {2.2}Travaux de Simon Henein}{9}
-\contentsline {subsection}{\numberline {2.2.1}Conception des guidages flexibles}{9}
-\contentsline {subsection}{\numberline {2.2.2}Flexure pivot for aerospace mechanisms \cite {henein}}{10}
-\contentsline {section}{\numberline {2.3}Three-Phase Electrostatic Rotary Stepper Micromotor with a Flexural Pivot Bearing \cite {confidential}}{10}
-\contentsline {section}{\numberline {2.4}Single mask 3-phase electrostatic rotary stepper micromotor \cite {transducers}}{11}
-\contentsline {chapter}{\numberline {3}Vulnerability Detection}{13}
-\contentsline {chapter}{\numberline {4}Scanner}{15}
-\contentsline {chapter}{\numberline {5}Vulnerability Notification Tool}{17}
-\contentsline {section}{\numberline {5.1}Motivation}{17}
-\contentsline {section}{\numberline {5.2}Related Work}{17}
-\contentsline {subsection}{\numberline {5.2.1}Cassandra}{17}
-\contentsline {section}{\numberline {5.3}Source Evaluation}{17}
-\contentsline {section}{\numberline {5.4}National Vulnerability Database}{17}
-\contentsline {subsection}{\numberline {5.4.1}CVSS}{17}
-\contentsline {subsection}{\numberline {5.4.2}Challenges}{17}
-\contentsline {subsubsection}{Modification Date}{17}
-\contentsline {subsection}{\numberline {5.4.3}and/or configuration}{17}
-\contentsline {section}{\numberline {5.5}Product Name Matching}{17}
-\contentsline {subsection}{\numberline {5.5.1}Common Platform Enumerations}{17}
-\contentsline {subsubsection}{Challenges}{17}
-\contentsline {subsection}{\numberline {5.5.2}WAD Product Names}{18}
-\contentsline {subsection}{\numberline {5.5.3}Matching Algorithms}{18}
-\contentsline {subsection}{\numberline {5.5.4}Evaluation of Algorithms}{18}
-\contentsline {section}{\numberline {5.6}Notifications}{18}
-\contentsline {chapter}{\numberline {6}Results}{19}
-\contentsline {section}{\numberline {6.1}Evaluation}{19}
-\contentsline {subsection}{\numberline {6.1.1}Approach}{19}
-\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{21}
-\contentsline {chapter}{\numberline {A}Annexes}{23}
-\contentsline {section}{\numberline {A.1}Conception des masques}{23}
-\contentsline {section}{\numberline {A.2}Constantes physiques et propri\'et\'es des mat\'eriaux}{24}
-\contentsline {section}{\numberline {A.3}Contenu du CD-ROM}{24}
-\contentsline {section}{\numberline {A.4}Processus de fabrication}{25}
-\contentsline {section}{\numberline {A.5}Protocole du processus de fabrication}{25}
-\contentsline {section}{\numberline {A.6}Article en cours d'impression: ``Three-Phase Electrostatic Rotary Stepper Micromotor with a Flexural Pivot Bearing''}{25}
-\contentsline {section}{\numberline {A.7}Article de la conf\'erence Transducers 2009: ``Single mask 3-phase electrostatic rotary stepper micromotor''}{25}
-\contentsline {chapter}{Bibliographie}{22}
+\contentsline {subsection}{\numberline {1.3.3}Relevant Tools}{7}
+\contentsline {subsubsection}{WAS}{7}
+\contentsline {subsubsection}{WASDOM}{7}
+\contentsline {subsubsection}{List of websites and webservers}{7}
+\contentsline {subsubsection}{WAD and Wappalyzer}{7}
+\contentsline {subsubsection}{SSDB?}{7}
+\contentsline {subsubsection}{Auto-notify?}{7}
+\contentsline {section}{\numberline {1.4}Objectives}{7}
+\contentsline {chapter}{\numberline {2}Scanner}{9}
+\contentsline {section}{\numberline {2.1}Motivation}{9}
+\contentsline {subsection}{\numberline {2.1.1}Use Cases}{9}
+\contentsline {section}{\numberline {2.2}Scanner Specifications}{9}
+\contentsline {subsection}{\numberline {2.2.1}Resource Types}{9}
+\contentsline {subsection}{\numberline {2.2.2}Scanner Options}{9}
+\contentsline {subsection}{\numberline {2.2.3}Plugin Specifications}{9}
+\contentsline {subsubsection}{Examples}{9}
+\contentsline {section}{\numberline {2.3}Implementation}{9}
+\contentsline {section}{\numberline {2.4}Results}{9}
+\contentsline {chapter}{\numberline {3}Vulnerability Notification Tool}{11}
+\contentsline {section}{\numberline {3.1}Motivation}{11}
+\contentsline {section}{\numberline {3.2}Related Work}{11}
+\contentsline {subsection}{\numberline {3.2.1}Cassandra}{11}
+\contentsline {section}{\numberline {3.3}Source Evaluation}{11}
+\contentsline {section}{\numberline {3.4}National Vulnerability Database}{11}
+\contentsline {subsection}{\numberline {3.4.1}CVSS}{11}
+\contentsline {subsection}{\numberline {3.4.2}Challenges}{11}
+\contentsline {subsubsection}{Modification Date}{11}
+\contentsline {subsection}{\numberline {3.4.3}and/or configuration}{11}
+\contentsline {section}{\numberline {3.5}Product Name Matching}{11}
+\contentsline {subsection}{\numberline {3.5.1}Common Platform Enumerations}{11}
+\contentsline {subsubsection}{Challenges}{11}
+\contentsline {subsection}{\numberline {3.5.2}WAD Product Names}{12}
+\contentsline {subsection}{\numberline {3.5.3}Matching Algorithms}{12}
+\contentsline {subsection}{\numberline {3.5.4}Evaluation of Algorithms}{12}
+\contentsline {section}{\numberline {3.6}Notifications}{12}
+\contentsline {chapter}{\numberline {4}Results}{13}
+\contentsline {section}{\numberline {4.1}Evaluation}{13}
+\contentsline {subsection}{\numberline {4.1.1}Approach}{13}
+\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{15}
+\contentsline {chapter}{\numberline {A}Annexes}{17}
+\contentsline {section}{\numberline {A.1}Conception des masques}{17}
+\contentsline {section}{\numberline {A.2}Constantes physiques et propri\'et\'es des mat\'eriaux}{18}
+\contentsline {section}{\numberline {A.3}Contenu du CD-ROM}{18}
+\contentsline {section}{\numberline {A.4}Processus de fabrication}{19}
+\contentsline {section}{\numberline {A.5}Protocole du processus de fabrication}{19}
+\contentsline {section}{\numberline {A.6}Article en cours d'impression: ``Three-Phase Electrostatic Rotary Stepper Micromotor with a Flexural Pivot Bearing''}{19}
+\contentsline {section}{\numberline {A.7}Article de la conf\'erence Transducers 2009: ``Single mask 3-phase electrostatic rotary stepper micromotor''}{19}
+\contentsline {chapter}{Bibliographie}{16}
