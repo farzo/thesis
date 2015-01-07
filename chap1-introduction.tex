@@ -1,6 +1,70 @@
 \chapter{Introduction}
 \thispagestyle{empty}
 
+\begin{itemize}
+\item Big number of websites and web servers
+\item increasing number of vulnerabilities
+\item importance of detecting vulnerable applications
+\end{itemize}
+
+
+\section{CERN Web Landscape}
+\subsection{Web Application Stack}
+vulnerability can occu in each of the layers
+software that is used in each layer
+\begin{itemize}
+\item developed internally
+\item used out of the box
+\end{itemize}
+examples of each
+if out of the box the vulnerabilities are usually discovered and reported in the public.
+internally developed ones need to be checked before open to outside
+
+\subsection{Centrally Hosted}
+different types ... explain!
+\subsection{Non Centrally Hosted}
+anyone can set up his own server and have his own application
+
+[[Some numbers and figures about each category]]
+
+
+\section{CERN Web Security}
+current approach to ensure the security of the web applications
+\subsection{Prevention}
+people are encouraged to use the central services. explain why?
+firewall opening procedure
+
+\subsection{Detection}
+two main areas where the vulnerabilities emerge
+\subsubsection{Detection Scripts}
+small scripts that are developed inside to detect vulnerable sources, most of the time when a new vuln is announced( heart bleed, shell shock, ssl3) and there is no patch yet, but some times also for mis-configuration detection (empty landing page, http authentication)
+\subsubsection{Published Vulnerabilities}
+vulnerabilities affecting a third part software and published in mailing lists, other sources, etc. example wordpress
+usually the vulnerabilities that are from well known software, human decision if we are going to care about the vulnerability and checking if the affected software is used at CERN.
+
+\subsection{Relevant Tools}
+\subsubsection{List of websites and webservers}
+\subsubsection{WAD and Wappalyzer}
+\subsubsection{SSDB?}
+\subsubsection{Auto-notify?}
+
+***an image of the architecture: ssdb, autonotify, skipfish, nmap, etc.
+
+
+\section{Objectives}
+improving the current approaches
+\begin{itemize}
+\item each script its own format. there is a need for a wrapper that has a unique format, scripts can deal with only one resource and ... [scanner-> chapter]
+\item missing vulnerabilties that do not create big noises in the public, manual check for wad outputs that match. Automate the monitoring of vulnerabilities to improve speed and accuracy of responding to vulnerabilities and automate the affected resource detection. [vunerability nitification tool -> chapter]
+\end{itemize}
+
+
+
+
+
+
+
+
 
 
 
