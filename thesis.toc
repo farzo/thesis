@@ -2,7 +2,7 @@
 \contentsline {section}{\numberline {1.1}Definitions}{5}
 \contentsline {section}{\numberline {1.2}CERN Web Landscape}{5}
 \contentsline {subsection}{\numberline {1.2.1}Web Application Stack}{5}
-\contentsline {subsection}{\numberline {1.2.2}Centrally Hosted}{5}
+\contentsline {subsection}{\numberline {1.2.2}Centrally Hosted}{6}
 \contentsline {subsection}{\numberline {1.2.3}Non Centrally Hosted}{6}
 \contentsline {section}{\numberline {1.3}CERN Web Security}{6}
 \contentsline {subsection}{\numberline {1.3.1}Prevention}{6}
@@ -44,9 +44,10 @@
 \contentsline {subsection}{\numberline {3.5.3}Matching Algorithms}{12}
 \contentsline {subsection}{\numberline {3.5.4}Evaluation of Algorithms}{12}
 \contentsline {section}{\numberline {3.6}Notifications}{12}
-\contentsline {chapter}{\numberline {4}Results}{13}
+\contentsline {chapter}{\numberline {4}Evaluation and Results}{13}
 \contentsline {section}{\numberline {4.1}Evaluation}{13}
 \contentsline {subsection}{\numberline {4.1.1}Approach}{13}
+\contentsline {subsection}{\numberline {4.1.2}sending emails}{13}
 \contentsline {chapter}{\numberline {5}Conclusion and Future Work}{15}
 \contentsline {chapter}{\numberline {A}Annexes}{17}
 \contentsline {section}{\numberline {A.1}Conception des masques}{17}
