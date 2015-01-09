@@ -33,18 +33,18 @@
 \contentsline {subsection}{\numberline {3.2.1}Cassandra}{12}{subsection.3.2.1}
 \contentsline {section}{\numberline {3.3}Source Evaluation}{12}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Approach}{12}{subsection.3.3.1}
-\contentsline {section}{\numberline {3.4}National Vulnerability Database}{13}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}CVSS}{13}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Challenges}{13}{subsection.3.4.2}
-\contentsline {subsubsection}{Modification Date}{13}{section*.12}
-\contentsline {subsection}{\numberline {3.4.3}and/or configuration}{13}{subsection.3.4.3}
-\contentsline {section}{\numberline {3.5}Product Name Matching}{13}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Common Platform Enumerations}{13}{subsection.3.5.1}
-\contentsline {subsubsection}{Challenges}{13}{section*.13}
-\contentsline {subsection}{\numberline {3.5.2}WAD Product Names}{13}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Matching Algorithms}{13}{subsection.3.5.3}
-\contentsline {subsection}{\numberline {3.5.4}Evaluation of Algorithms}{13}{subsection.3.5.4}
-\contentsline {section}{\numberline {3.6}Notifications}{13}{section.3.6}
+\contentsline {section}{\numberline {3.4}National Vulnerability Database}{14}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}CVSS}{14}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Challenges}{14}{subsection.3.4.2}
+\contentsline {subsubsection}{Modification Date}{14}{section*.12}
+\contentsline {subsection}{\numberline {3.4.3}and/or configuration}{14}{subsection.3.4.3}
+\contentsline {section}{\numberline {3.5}Product Name Matching}{14}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Common Platform Enumerations}{14}{subsection.3.5.1}
+\contentsline {subsubsection}{Challenges}{14}{section*.13}
+\contentsline {subsection}{\numberline {3.5.2}WAD Product Names}{14}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Matching Algorithms}{14}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.4}Evaluation of Algorithms}{14}{subsection.3.5.4}
+\contentsline {section}{\numberline {3.6}Notifications}{14}{section.3.6}
 \contentsline {chapter}{\numberline {4}Evaluation and Results}{15}{chapter.4}
 \contentsline {section}{\numberline {4.1}Evaluation}{15}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Approach}{15}{subsection.4.1.1}
