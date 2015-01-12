@@ -29,33 +29,36 @@
 \contentsline {section}{\numberline {2.4}Results}{9}{section.2.4}
 \contentsline {chapter}{\numberline {3}Vulnerability Notification Tool}{11}{chapter.3}
 \contentsline {section}{\numberline {3.1}Motivation}{11}{section.3.1}
-\contentsline {section}{\numberline {3.2}Related Work}{12}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Cassandra}{12}{subsection.3.2.1}
-\contentsline {section}{\numberline {3.3}Source Evaluation}{12}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Approach}{12}{subsection.3.3.1}
-\contentsline {section}{\numberline {3.4}National Vulnerability Database}{14}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}CVSS}{14}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Challenges}{14}{subsection.3.4.2}
-\contentsline {subsubsection}{Modification Date}{14}{section*.12}
-\contentsline {subsection}{\numberline {3.4.3}and/or configuration}{14}{subsection.3.4.3}
-\contentsline {section}{\numberline {3.5}Product Name Matching}{14}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Common Platform Enumerations}{14}{subsection.3.5.1}
-\contentsline {subsubsection}{Challenges}{14}{section*.13}
-\contentsline {subsection}{\numberline {3.5.2}WAD Product Names}{14}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Matching Algorithms}{14}{subsection.3.5.3}
-\contentsline {subsection}{\numberline {3.5.4}Evaluation of Algorithms}{14}{subsection.3.5.4}
-\contentsline {section}{\numberline {3.6}Notifications}{14}{section.3.6}
-\contentsline {chapter}{\numberline {4}Evaluation and Results}{15}{chapter.4}
-\contentsline {section}{\numberline {4.1}Evaluation}{15}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Approach}{15}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}sending emails}{15}{subsection.4.1.2}
-\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{17}{chapter.5}
-\contentsline {chapter}{\numberline {A}Annexes}{19}{appendix.A}
-\contentsline {section}{\numberline {A.1}Conception des masques}{19}{section.A.1}
-\contentsline {section}{\numberline {A.2}Constantes physiques et propri\'et\'es des mat\'eriaux}{20}{section.A.2}
-\contentsline {section}{\numberline {A.3}Contenu du CD-ROM}{20}{section.A.3}
-\contentsline {section}{\numberline {A.4}Processus de fabrication}{21}{section.A.4}
-\contentsline {section}{\numberline {A.5}Protocole du processus de fabrication}{21}{section.A.5}
-\contentsline {section}{\numberline {A.6}Article en cours d'impression: ``Three-Phase Electrostatic Rotary Stepper Micromotor with a Flexural Pivot Bearing''}{21}{section.A.6}
-\contentsline {section}{\numberline {A.7}Article de la conf\'erence Transducers 2009: ``Single mask 3-phase electrostatic rotary stepper micromotor''}{21}{section.A.7}
-\contentsline {chapter}{Bibliographie}{18}{chapter.5}
+\contentsline {section}{\numberline {3.2}Source Evaluation}{12}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Approach}{12}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Vulnerability Sources}{13}{subsection.3.2.2}
+\contentsline {subsubsection}{Secunia Vulnerability Intelligence Manager (VIM)}{13}{section*.12}
+\contentsline {subsection}{\numberline {3.2.3}Conclusion}{13}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}National Vulnerability Database}{14}{subsection.3.2.4}
+\contentsline {subsubsection}{Data Feeds}{14}{section*.13}
+\contentsline {section}{\numberline {3.3}Specifications and Implementation}{15}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Challenges}{15}{subsection.3.3.1}
+\contentsline {subsubsection}{Downloading}{15}{section*.14}
+\contentsline {subsubsection}{Modification Date}{15}{section*.15}
+\contentsline {subsection}{\numberline {3.3.2}and/or configuration}{15}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Product Name Matching}{15}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Common Platform Enumerations}{15}{subsection.3.4.1}
+\contentsline {subsubsection}{Challenges}{15}{section*.16}
+\contentsline {subsection}{\numberline {3.4.2}WAD Product Names}{16}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Matching Algorithms}{16}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Evaluation of Algorithms}{16}{subsection.3.4.4}
+\contentsline {section}{\numberline {3.5}Notifications}{16}{section.3.5}
+\contentsline {chapter}{\numberline {4}Evaluation and Results}{17}{chapter.4}
+\contentsline {section}{\numberline {4.1}Evaluation}{17}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Approach}{17}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}sending emails}{17}{subsection.4.1.2}
+\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{19}{chapter.5}
+\contentsline {chapter}{\numberline {A}Annexes}{21}{appendix.A}
+\contentsline {section}{\numberline {A.1}Conception des masques}{21}{section.A.1}
+\contentsline {section}{\numberline {A.2}Constantes physiques et propri\'et\'es des mat\'eriaux}{22}{section.A.2}
+\contentsline {section}{\numberline {A.3}Contenu du CD-ROM}{22}{section.A.3}
+\contentsline {section}{\numberline {A.4}Processus de fabrication}{23}{section.A.4}
+\contentsline {section}{\numberline {A.5}Protocole du processus de fabrication}{23}{section.A.5}
+\contentsline {section}{\numberline {A.6}Article en cours d'impression: ``Three-Phase Electrostatic Rotary Stepper Micromotor with a Flexural Pivot Bearing''}{23}{section.A.6}
+\contentsline {section}{\numberline {A.7}Article de la conf\'erence Transducers 2009: ``Single mask 3-phase electrostatic rotary stepper micromotor''}{23}{section.A.7}
+\contentsline {chapter}{Bibliographie}{20}{chapter.5}

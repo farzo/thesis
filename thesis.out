@@ -20,20 +20,20 @@
 \BOOKMARK [1][-]{section.2.4}{Results}{chapter.2}
 \BOOKMARK [0][-]{chapter.3}{Vulnerability Notification Tool}{}
 \BOOKMARK [1][-]{section.3.1}{Motivation}{chapter.3}
-\BOOKMARK [1][-]{section.3.2}{Related Work}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.2.1}{Cassandra}{section.3.2}
-\BOOKMARK [1][-]{section.3.3}{Source Evaluation}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.3.1}{Approach}{section.3.3}
-\BOOKMARK [1][-]{section.3.4}{National Vulnerability Database}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.4.1}{CVSS}{section.3.4}
-\BOOKMARK [2][-]{subsection.3.4.2}{Challenges}{section.3.4}
-\BOOKMARK [2][-]{subsection.3.4.3}{and/or configuration}{section.3.4}
-\BOOKMARK [1][-]{section.3.5}{Product Name Matching}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.5.1}{Common Platform Enumerations}{section.3.5}
-\BOOKMARK [2][-]{subsection.3.5.2}{WAD Product Names}{section.3.5}
-\BOOKMARK [2][-]{subsection.3.5.3}{Matching Algorithms}{section.3.5}
-\BOOKMARK [2][-]{subsection.3.5.4}{Evaluation of Algorithms}{section.3.5}
-\BOOKMARK [1][-]{section.3.6}{Notifications}{chapter.3}
+\BOOKMARK [1][-]{section.3.2}{Source Evaluation}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.2.1}{Approach}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.2}{Vulnerability Sources}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.3}{Conclusion}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.4}{National Vulnerability Database}{section.3.2}
+\BOOKMARK [1][-]{section.3.3}{Specifications and Implementation}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.3.1}{Challenges}{section.3.3}
+\BOOKMARK [2][-]{subsection.3.3.2}{and/or configuration}{section.3.3}
+\BOOKMARK [1][-]{section.3.4}{Product Name Matching}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.4.1}{Common Platform Enumerations}{section.3.4}
+\BOOKMARK [2][-]{subsection.3.4.2}{WAD Product Names}{section.3.4}
+\BOOKMARK [2][-]{subsection.3.4.3}{Matching Algorithms}{section.3.4}
+\BOOKMARK [2][-]{subsection.3.4.4}{Evaluation of Algorithms}{section.3.4}
+\BOOKMARK [1][-]{section.3.5}{Notifications}{chapter.3}
 \BOOKMARK [0][-]{chapter.4}{Evaluation and Results}{}
 \BOOKMARK [1][-]{section.4.1}{Evaluation}{chapter.4}
 \BOOKMARK [2][-]{subsection.4.1.1}{Approach}{section.4.1}
