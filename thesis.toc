@@ -45,9 +45,9 @@
 \contentsline {subsection}{\numberline {3.4.1}Common Platform Enumerations}{17}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}WAD Product Names}{17}{subsection.3.4.2}
 \contentsline {subsubsection}{Challenges}{17}{section*.16}
-\contentsline {subsection}{\numberline {3.4.3}Matching Algorithms}{17}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Evaluation of Algorithms}{17}{subsection.3.4.4}
-\contentsline {section}{\numberline {3.5}Notifications}{17}{section.3.5}
+\contentsline {subsection}{\numberline {3.4.3}Matching Algorithms}{18}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Evaluation of Algorithms}{18}{subsection.3.4.4}
+\contentsline {section}{\numberline {3.5}Notifications}{18}{section.3.5}
 \contentsline {chapter}{\numberline {4}Evaluation and Results}{19}{chapter.4}
 \contentsline {section}{\numberline {4.1}Evaluation}{19}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Approach}{19}{subsection.4.1.1}
