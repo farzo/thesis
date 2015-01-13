@@ -48,18 +48,23 @@
 \contentsline {subsection}{\numberline {3.4.3}Matching Algorithms}{19}{subsection.3.4.3}
 \contentsline {subsection}{\numberline {3.4.4}Evaluation of the Mapping Algorithms}{19}{subsection.3.4.4}
 \contentsline {subsubsection}{False Positives}{19}{section*.17}
-\contentsline {section}{\numberline {3.5}Notifications}{19}{section.3.5}
-\contentsline {chapter}{\numberline {4}Evaluation and Results}{21}{chapter.4}
-\contentsline {section}{\numberline {4.1}Evaluation}{21}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Approach}{21}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}sending emails}{21}{subsection.4.1.2}
-\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{23}{chapter.5}
-\contentsline {chapter}{\numberline {A}Annexes}{25}{appendix.A}
-\contentsline {section}{\numberline {A.1}Conception des masques}{25}{section.A.1}
-\contentsline {section}{\numberline {A.2}Constantes physiques et propri\'et\'es des mat\'eriaux}{26}{section.A.2}
-\contentsline {section}{\numberline {A.3}Contenu du CD-ROM}{26}{section.A.3}
-\contentsline {section}{\numberline {A.4}Processus de fabrication}{27}{section.A.4}
-\contentsline {section}{\numberline {A.5}Protocole du processus de fabrication}{27}{section.A.5}
-\contentsline {section}{\numberline {A.6}Article en cours d'impression: ``Three-Phase Electrostatic Rotary Stepper Micromotor with a Flexural Pivot Bearing''}{27}{section.A.6}
-\contentsline {section}{\numberline {A.7}Article de la conf\'erence Transducers 2009: ``Single mask 3-phase electrostatic rotary stepper micromotor''}{27}{section.A.7}
-\contentsline {chapter}{Bibliographie}{24}{chapter.5}
+\contentsline {subsubsection}{False Negatives}{19}{section*.18}
+\contentsline {subsection}{\numberline {3.4.5}Vulnerable Resources}{20}{subsection.3.4.5}
+\contentsline {section}{\numberline {3.5}Notifications}{20}{section.3.5}
+\contentsline {section}{\numberline {3.6}Evaluation and Results}{21}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Approach}{21}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}sending emails}{21}{subsection.3.6.2}
+\contentsline {chapter}{\numberline {4}Evaluation and Results}{23}{chapter.4}
+\contentsline {section}{\numberline {4.1}Evaluation}{23}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Approach}{23}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}sending emails}{23}{subsection.4.1.2}
+\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{25}{chapter.5}
+\contentsline {chapter}{\numberline {A}Annexes}{27}{appendix.A}
+\contentsline {section}{\numberline {A.1}Conception des masques}{27}{section.A.1}
+\contentsline {section}{\numberline {A.2}Constantes physiques et propri\'et\'es des mat\'eriaux}{28}{section.A.2}
+\contentsline {section}{\numberline {A.3}Contenu du CD-ROM}{28}{section.A.3}
+\contentsline {section}{\numberline {A.4}Processus de fabrication}{29}{section.A.4}
+\contentsline {section}{\numberline {A.5}Protocole du processus de fabrication}{29}{section.A.5}
+\contentsline {section}{\numberline {A.6}Article en cours d'impression: ``Three-Phase Electrostatic Rotary Stepper Micromotor with a Flexural Pivot Bearing''}{29}{section.A.6}
+\contentsline {section}{\numberline {A.7}Article de la conf\'erence Transducers 2009: ``Single mask 3-phase electrostatic rotary stepper micromotor''}{29}{section.A.7}
+\contentsline {chapter}{Bibliographie}{26}{chapter.5}
