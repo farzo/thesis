@@ -56,8 +56,6 @@
 \contentsline {paragraph}{}{21}{section*.20}
 \contentsline {paragraph}{}{21}{section*.21}
 \contentsline {subsection}{\numberline {3.6.1}Name Matching }{21}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}Approach}{22}{subsection.3.6.2}
-\contentsline {subsection}{\numberline {3.6.3}sending emails}{22}{subsection.3.6.3}
 \contentsline {chapter}{\numberline {4}Evaluation and Results}{27}{chapter.4}
 \contentsline {section}{\numberline {4.1}Evaluation}{27}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Approach}{27}{subsection.4.1.1}
