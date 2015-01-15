@@ -24,6 +24,12 @@
 \usepackage[table]{xcolor}% http://ctan.org/pkg/xcolor
 \usepackage{hhline}
 \usepackage{framed}
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+
 %\usepackage{amsmath}
 %\usepackage{algorithm}
 %\usepackage[noend]{algpseudocode}
@@ -49,7 +55,7 @@
 
 \usepackage{amsmath,amssymb,amstext,mathtext}
 
-
+\definecolor{LightBlue}{rgb}{0.8,0.8,1.0}
 % Uncomment one of these line depending whether you want to see the draft or the final version.
 %\usepackage[draft]{graphicx}
 % TODO: What is a draft?
