@@ -50,16 +50,16 @@
 \contentsline {subsubsection}{WAD Product Names}{20}{section*.21}
 \contentsline {subsubsection}{Challenges}{20}{section*.22}
 \contentsline {subsection}{\numberline {3.4.2}Matching Algorithms}{21}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Evaluation of the Mapping Algorithms}{21}{subsection.3.4.3}
-\contentsline {subsubsection}{False Positives}{21}{section*.23}
-\contentsline {subsubsection}{False Negatives}{21}{section*.24}
-\contentsline {subsection}{\numberline {3.4.4}Vulnerable Resources}{22}{subsection.3.4.4}
-\contentsline {section}{\numberline {3.5}Notifications}{22}{section.3.5}
-\contentsline {section}{\numberline {3.6}Evaluation and Results}{23}{section.3.6}
-\contentsline {paragraph}{}{23}{section*.25}
-\contentsline {paragraph}{}{23}{section*.26}
-\contentsline {paragraph}{}{23}{section*.27}
-\contentsline {subsection}{\numberline {3.6.1}Name Matching }{23}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.4.3}Evaluation of the Mapping Algorithms}{23}{subsection.3.4.3}
+\contentsline {subsubsection}{False Positives}{23}{section*.23}
+\contentsline {subsubsection}{False Negatives}{23}{section*.24}
+\contentsline {subsection}{\numberline {3.4.4}Vulnerable Resources}{24}{subsection.3.4.4}
+\contentsline {section}{\numberline {3.5}Notifications}{24}{section.3.5}
+\contentsline {section}{\numberline {3.6}Evaluation and Results}{24}{section.3.6}
+\contentsline {paragraph}{}{24}{section*.25}
+\contentsline {paragraph}{}{24}{section*.26}
+\contentsline {paragraph}{}{25}{section*.27}
+\contentsline {subsection}{\numberline {3.6.1}Name Matching }{25}{subsection.3.6.1}
 \contentsline {chapter}{\numberline {4}Evaluation and Results}{29}{chapter.4}
 \contentsline {section}{\numberline {4.1}Evaluation}{29}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Approach}{29}{subsection.4.1.1}
