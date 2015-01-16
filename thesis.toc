@@ -61,13 +61,12 @@
 \contentsline {paragraph}{}{24}{section*.27}
 \contentsline {paragraph}{}{24}{section*.28}
 \contentsline {paragraph}{}{25}{section*.29}
-\contentsline {subsection}{\numberline {3.6.1}Name Matching }{25}{subsection.3.6.1}
-\contentsline {chapter}{\numberline {4}Evaluation and Results}{31}{chapter.4}
-\contentsline {section}{\numberline {4.1}Evaluation}{31}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Approach}{31}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}sending emails}{31}{subsection.4.1.2}
-\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{33}{chapter.5}
-\contentsline {chapter}{Bibliographie}{34}{chapter.5}
-\contentsline {chapter}{\numberline {A}Annexes}{37}{appendix.A}
-\contentsline {section}{\numberline {A.1}VNT Evaluation Methode}{37}{section.A.1}
-\contentsline {subsection}{\numberline {A.1.1}Calculating the Number of Vulnerabilities}{37}{subsection.A.1.1}
+\contentsline {chapter}{\numberline {4}Evaluation and Results}{29}{chapter.4}
+\contentsline {section}{\numberline {4.1}Evaluation}{29}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Approach}{29}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}sending emails}{29}{subsection.4.1.2}
+\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{31}{chapter.5}
+\contentsline {chapter}{Bibliographie}{32}{chapter.5}
+\contentsline {chapter}{\numberline {A}Annexes}{35}{appendix.A}
+\contentsline {section}{\numberline {A.1}VNT Evaluation Methode}{35}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Calculating the Number of Vulnerabilities}{35}{subsection.A.1.1}
