@@ -62,8 +62,8 @@
 \contentsline {paragraph}{}{24}{section*.29}
 \contentsline {paragraph}{}{24}{section*.30}
 \contentsline {paragraph}{}{25}{section*.31}
-\contentsline {chapter}{\numberline {4}Conclusion and Future Work}{29}{chapter.4}
-\contentsline {chapter}{Bibliographie}{30}{chapter.4}
+\contentsline {chapter}{\numberline {4}Conclusion and Future Work}{31}{chapter.4}
 \contentsline {chapter}{\numberline {A}Annexes}{33}{appendix.A}
 \contentsline {section}{\numberline {A.1}VNT Evaluation Method}{33}{section.A.1}
 \contentsline {subsection}{\numberline {A.1.1}Calculating the Number of Vulnerabilities}{33}{subsection.A.1.1}
+\contentsline {chapter}{Bibliographie}{32}{chapter.4}
