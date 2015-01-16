@@ -24,16 +24,14 @@
 \BOOKMARK [2][-]{subsection.3.2.1}{Approach}{section.3.2}
 \BOOKMARK [2][-]{subsection.3.2.2}{Vulnerability Sources}{section.3.2}
 \BOOKMARK [2][-]{subsection.3.2.3}{Conclusion}{section.3.2}
-\BOOKMARK [2][-]{subsection.3.2.4}{National Vulnerability Database}{section.3.2}
-\BOOKMARK [1][-]{section.3.3}{Specifications and Implementation}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.3.1}{Challenges}{section.3.3}
-\BOOKMARK [2][-]{subsection.3.3.2}{Vulnerable Configuration}{section.3.3}
+\BOOKMARK [1][-]{section.3.3}{National Vulnerability Database}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.3.1}{Data Feeds}{section.3.3}
+\BOOKMARK [2][-]{subsection.3.3.2}{Challenges}{section.3.3}
 \BOOKMARK [1][-]{section.3.4}{Product Name Matching}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.4.1}{Common Platform Enumerations}{section.3.4}
-\BOOKMARK [2][-]{subsection.3.4.2}{WAD Product Names}{section.3.4}
-\BOOKMARK [2][-]{subsection.3.4.3}{Matching Algorithms}{section.3.4}
-\BOOKMARK [2][-]{subsection.3.4.4}{Evaluation of the Mapping Algorithms}{section.3.4}
-\BOOKMARK [2][-]{subsection.3.4.5}{Vulnerable Resources}{section.3.4}
+\BOOKMARK [2][-]{subsection.3.4.1}{Approach}{section.3.4}
+\BOOKMARK [2][-]{subsection.3.4.2}{Matching Algorithms}{section.3.4}
+\BOOKMARK [2][-]{subsection.3.4.3}{Evaluation of the Mapping Algorithms}{section.3.4}
+\BOOKMARK [2][-]{subsection.3.4.4}{Vulnerable Resources}{section.3.4}
 \BOOKMARK [1][-]{section.3.5}{Notifications}{chapter.3}
 \BOOKMARK [1][-]{section.3.6}{Evaluation and Results}{chapter.3}
 \BOOKMARK [2][-]{subsection.3.6.1}{Name Matching }{section.3.6}

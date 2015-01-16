@@ -37,35 +37,35 @@
 \contentsline {subsection}{\numberline {3.2.2}Vulnerability Sources}{13}{subsection.3.2.2}
 \contentsline {paragraph}{}{13}{section*.15}
 \contentsline {subsection}{\numberline {3.2.3}Conclusion}{15}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}National Vulnerability Database}{16}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}National Vulnerability Database}{16}{section.3.3}
 \contentsline {paragraph}{}{16}{section*.16}
-\contentsline {subsubsection}{Data Feeds}{16}{section*.17}
-\contentsline {section}{\numberline {3.3}Specifications and Implementation}{17}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Challenges}{17}{subsection.3.3.1}
-\contentsline {subsubsection}{Downloading}{17}{section*.18}
-\contentsline {subsubsection}{Modification Date}{17}{section*.19}
-\contentsline {subsection}{\numberline {3.3.2}Vulnerable Configuration}{18}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.1}Data Feeds}{16}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Challenges}{17}{subsection.3.3.2}
+\contentsline {subsubsection}{Downloading}{17}{section*.17}
+\contentsline {subsubsection}{Modification Date}{17}{section*.18}
+\contentsline {subsubsection}{Vulnerable Configuration}{18}{section*.19}
 \contentsline {section}{\numberline {3.4}Product Name Matching}{18}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Common Platform Enumerations}{19}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}WAD Product Names}{20}{subsection.3.4.2}
-\contentsline {subsubsection}{Challenges}{20}{section*.20}
-\contentsline {subsection}{\numberline {3.4.3}Matching Algorithms}{21}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Evaluation of the Mapping Algorithms}{22}{subsection.3.4.4}
-\contentsline {subsubsection}{False Positives}{22}{section*.21}
-\contentsline {subsubsection}{False Negatives}{22}{section*.22}
-\contentsline {subsection}{\numberline {3.4.5}Vulnerable Resources}{23}{subsection.3.4.5}
-\contentsline {section}{\numberline {3.5}Notifications}{23}{section.3.5}
+\contentsline {subsection}{\numberline {3.4.1}Approach}{19}{subsection.3.4.1}
+\contentsline {subsubsection}{Common Platform Enumerations}{19}{section*.20}
+\contentsline {subsubsection}{WAD Product Names}{20}{section*.21}
+\contentsline {subsubsection}{Challenges}{20}{section*.22}
+\contentsline {subsection}{\numberline {3.4.2}Matching Algorithms}{21}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Evaluation of the Mapping Algorithms}{21}{subsection.3.4.3}
+\contentsline {subsubsection}{False Positives}{21}{section*.23}
+\contentsline {subsubsection}{False Negatives}{21}{section*.24}
+\contentsline {subsection}{\numberline {3.4.4}Vulnerable Resources}{22}{subsection.3.4.4}
+\contentsline {section}{\numberline {3.5}Notifications}{22}{section.3.5}
 \contentsline {section}{\numberline {3.6}Evaluation and Results}{23}{section.3.6}
-\contentsline {paragraph}{}{23}{section*.23}
-\contentsline {paragraph}{}{23}{section*.24}
-\contentsline {paragraph}{}{24}{section*.25}
-\contentsline {subsection}{\numberline {3.6.1}Name Matching }{24}{subsection.3.6.1}
+\contentsline {paragraph}{}{23}{section*.25}
+\contentsline {paragraph}{}{23}{section*.26}
+\contentsline {paragraph}{}{23}{section*.27}
+\contentsline {subsection}{\numberline {3.6.1}Name Matching }{23}{subsection.3.6.1}
 \contentsline {chapter}{\numberline {4}Evaluation and Results}{29}{chapter.4}
 \contentsline {section}{\numberline {4.1}Evaluation}{29}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Approach}{29}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}sending emails}{29}{subsection.4.1.2}
 \contentsline {chapter}{\numberline {5}Conclusion and Future Work}{31}{chapter.5}
-\contentsline {chapter}{\numberline {A}Annexes}{33}{appendix.A}
-\contentsline {section}{\numberline {A.1}VNT Evaluation Methode}{33}{section.A.1}
-\contentsline {subsection}{\numberline {A.1.1}Calculating the Number of Vulnerabilities}{33}{subsection.A.1.1}
 \contentsline {chapter}{Bibliographie}{32}{chapter.5}
+\contentsline {chapter}{\numberline {A}Annexes}{35}{appendix.A}
+\contentsline {section}{\numberline {A.1}VNT Evaluation Methode}{35}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Calculating the Number of Vulnerabilities}{35}{subsection.A.1.1}
