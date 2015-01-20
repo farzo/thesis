@@ -6,21 +6,24 @@
 
 \paragraph{}
 
-Security Team performs scans of various types of resources, such as devices, web servers, web sites. As already discussed in chapter \ref{introduction}, it is impossible to scan these resources manually and there is a need for an Scanning Engine that would facilitate scheduling and running these scans (in both synchronous and asynchronous modes), sharing the load across multiple scanning hosts in a fault-tolerant way, and combining results.
-WASDOM as discussed in section \ref{sec:tools} contains various scripts for detecting misconfigurations, e.g. expired certificates, basic HTTP authentication; or for detecting vulnerabilities, such as Heartbleed\footnote{Critical OpenSSL security bug disclosed in 2014}. The scanner as we are going to describe in this chapter is a wrapper around all these short scripts and it aims to facilitate scheduling and running these scripts (scans) by
-\begin{enumerate}
-\item Enabling the permanent and automatic scanning of resources, i.e. devices, websites, web servers, etc.
-\item Making it possible to activate a subset of available detection scripts on targets
-\item Showing a list of available detection scripts with an explanation of what kind of detection each does
-\end{enumerate} 
+Security Team performs scans of various types of resources, such as devices, web servers, web sites, etc. As already discussed in chapter \ref{introduction}, it is impossible to scan these resources manually and there is a need for an Scanning Engine that would facilitate scheduling and running these scans, share the load across multiple scanning hosts in a fault-tolerant way, and combine results.
+GNU parallel is a command-line utility for Unix-like operating systems that allows us to execute jobs concurrently locally or using remote computers. A job is typically a single command or a small script that has to be run for each of the lines in the input.\footnote{\url{http://savannah.gnu.org/projects/parallel}} It will be a trivial task to provide GNU parallel with a list of CERN resources (targets) and have the scans run concurrently.
+\\ 
+On the other hand, WASDOM as discussed in section \ref{sec:tools} contains various scripts for detecting misconfigurations, such as expired certificates and basic HTTP authentication, or vulnerabilities, such as Heartbleed\footnote{Critical OpenSSL security bug disclosed in 2014}. 
+\\
+There is a need for a tool to fill the gap between detection scripts and GNU parallel, making it possible to enable the permanent and automatic scanning of the resources. This tool (scanner) will act like a wrapper around detection scripts, standardizing the input and output format of the scripts, so that they can be used with GNU parallel and their results can be analyzed automatically. The Scanner should also make it possible to run a subset of available scripts on targets. Another objective of the Scanner is to make it as simple and quick as possible to add a new detection script, and run it on all CERN resources to ensure an acceptable detection/response speed when new vulnerabilities emerge.
 
 \subsection{Use Cases}
+There are two major use cases for the Scanner:
 \begin{itemize}
-\item manual execution
-\item automatic execution
+\item \textbf{Manual execution}: When we need to run an existing set of detection scripts on a new target (or existing targets, to get fresh results), or when we need to create a new script (e.g. Heartbleed test, when OpenSSL vulnerability surfaced) on the usual targets
+\item \textbf{Automatic execution}: For permanent scanning of some target lists (e.g. all official web sites, all web servers exposed on the firewall, etc.) with relevant test sets
 \end{itemize}
 
 \section{Scanner Specifications}
+\paragraph{}
+The scanner runs a set of plugins on a single target, and collects, combines and outputs plugins scan results. 
+When calling the scanner, we ask it to scan a given resource type and name; the scanner ensures only plugins for that resource type will be executed. 
 
 \subsection{Plugin Specifications}
 \subsection{Resource Types}
