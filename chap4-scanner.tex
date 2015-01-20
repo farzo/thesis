@@ -3,12 +3,17 @@
 \thispagestyle{empty}
 
 \section{Motivation}
-filling the gap between individual tests and scanning engine
 
-available set of plugins (from wasdom), activate a subset
+\paragraph{}
 
-enabling permanent automatic scanning of web servers and websites
-scanning engine can be used in another layer
+Security Team performs scans of various types of resources, such as devices, web servers, web sites. As already discussed in chapter \ref{introduction}, it is impossible to scan these resources manually and there is a need for an Scanning Engine that would facilitate scheduling and running these scans (in both synchronous and asynchronous modes), sharing the load across multiple scanning hosts in a fault-tolerant way, and combining results.
+WASDOM as discussed in section \ref{sec:tools} contains various scripts for detecting misconfigurations, e.g. expired certificates, basic HTTP authentication; or for detecting vulnerabilities, such as Heartbleed\footnote{Critical OpenSSL security bug disclosed in 2014}. The scanner as we are going to describe in this chapter is a wrapper around all these short scripts and it aims to facilitate scheduling and running these scripts (scans) by
+\begin{enumerate}
+\item Enabling the permanent and automatic scanning of resources, i.e. devices, websites, web servers, etc.
+\item Making it possible to activate a subset of available detection scripts on targets
+\item Showing a list of available detection scripts with an explanation of what kind of detection each does
+\end{enumerate} 
+
 \subsection{Use Cases}
 \begin{itemize}
 \item manual execution

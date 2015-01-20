@@ -41,33 +41,16 @@ internally developed ones need to be checked before open to outside
 \subsection{CERN Websites}
 There are two types of websites and web servers used at CERN.
 \subsubsection{centrally hosted websites}
-These websites are hosted centrally by the IT department. Currently there are about 13k instances of these websites. Each of them has a URL in the format of \texttt{\url{http://cern.ch/X}} or \texttt{\ur{http://X.web.cern.ch}}, where X is the name of the website. Examples like \url{http://home.web.cern.ch/}. Managed by WebServices \url{http://cern.ch/web} and could have various types 
+These websites are hosted centrally by the IT department. Currently there are about 13k instances of these websites. Each of them has a URL in the format of \texttt{\url{http://cern.ch/X}} or \texttt{\url{http://X.web.cern.ch}}, where X is the name of the website. Examples like \url{http://home.web.cern.ch/}. Managed by WebServices \url{http://cern.ch/web} and could have various types 
 (file/application hosting:)
-–
 
-IIS (Windows), files on DFS
--
-> PHP, ASP
-–
-Apache (Linux), files on AFS
--
-> PHP, CGI
-–
-J2EE
--
->
-Java 
+IIS (Windows), files on DFS ( PHP, ASP)
 
+Apache (Linux), files on AFS(PHP, CGI)
 
-CMS (Content Management Systems)
-
-–
-Drupal
--
-> PHP
-–
+J2EE(Java) 
+CMS (Content Management Systems) (Drupal) PHP
 SharePoint
-–
 Social community
 
 
@@ -84,15 +67,13 @@ different types ... explain!
 \subsubsection{Non Centrally Hosted}
 
 On the other hand, one can find between 10k to 20k instances of dedicated web servers at CERN (?) in the format of \url{http://X.cern.ch} and examples like \url{http://indico.cern.ch/}
-,
-–
+
 Any technology stack (OS, web server, application platform
 and frameworks etc. etc.)
-–
 Many visible only inside CERN
-–
+
 Others have firewall openings
-–
+
 visible from outside
 
 [[Some numbers and figures about each category]]
@@ -113,6 +94,7 @@ vulnerabilities affecting a third part software and published in mailing lists, 
 usually the vulnerabilities that are from well known software, human decision if we are going to care about the vulnerability and checking if the affected software is used at CERN.
 
 \subsection{Relevant Tools}
+\label{sec:tools}
 \subsubsection{WAS}
 \subsubsection{WASDOM}
 \subsubsection{List of websites and webservers}
