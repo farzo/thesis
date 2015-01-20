@@ -3,13 +3,13 @@
 \contentsline {section}{\numberline {1.2}CERN Web Landscape}{5}{section.1.2}
 \contentsline {subsection}{\numberline {1.2.1}Web Application Stack}{5}{subsection.1.2.1}
 \contentsline {subsection}{\numberline {1.2.2}CERN Websites}{6}{subsection.1.2.2}
-\contentsline {subsubsection}{centrally}{6}{section*.3}
+\contentsline {subsubsection}{centrally hosted websites}{6}{section*.3}
 \contentsline {subsubsection}{Non Centrally Hosted}{6}{section*.4}
 \contentsline {section}{\numberline {1.3}CERN Web Security}{6}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Prevention}{6}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Detection}{6}{subsection.1.3.2}
-\contentsline {subsubsection}{Detection Scripts}{6}{section*.5}
-\contentsline {subsubsection}{Published Vulnerabilities}{6}{section*.6}
+\contentsline {subsection}{\numberline {1.3.1}Prevention}{7}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Detection}{7}{subsection.1.3.2}
+\contentsline {subsubsection}{Detection Scripts}{7}{section*.5}
+\contentsline {subsubsection}{Published Vulnerabilities}{7}{section*.6}
 \contentsline {subsection}{\numberline {1.3.3}Relevant Tools}{7}{subsection.1.3.3}
 \contentsline {subsubsection}{WAS}{7}{section*.7}
 \contentsline {subsubsection}{WASDOM}{7}{section*.8}
@@ -17,7 +17,7 @@
 \contentsline {subsubsection}{WAD and Wappalyzer}{7}{section*.10}
 \contentsline {subsubsection}{SSDB?}{7}{section*.11}
 \contentsline {subsubsection}{Auto-notify?}{7}{section*.12}
-\contentsline {section}{\numberline {1.4}Objectives}{7}{section.1.4}
+\contentsline {section}{\numberline {1.4}Objectives}{8}{section.1.4}
 \contentsline {chapter}{\numberline {2}Scanner}{9}{chapter.2}
 \contentsline {section}{\numberline {2.1}Motivation}{9}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Use Cases}{9}{subsection.2.1.1}
@@ -63,7 +63,7 @@
 \contentsline {paragraph}{}{24}{section*.30}
 \contentsline {paragraph}{}{25}{section*.31}
 \contentsline {chapter}{\numberline {4}Conclusion and Future Work}{31}{chapter.4}
-\contentsline {chapter}{\numberline {A}Annexes}{33}{appendix.A}
-\contentsline {section}{\numberline {A.1}VNT Evaluation Method}{33}{section.A.1}
-\contentsline {subsection}{\numberline {A.1.1}Calculating the Number of Vulnerabilities}{33}{subsection.A.1.1}
 \contentsline {chapter}{Bibliographie}{32}{chapter.4}
+\contentsline {chapter}{\numberline {A}Annexes}{35}{appendix.A}
+\contentsline {section}{\numberline {A.1}VNT Evaluation Method}{35}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Calculating the Number of Vulnerabilities}{35}{subsection.A.1.1}
