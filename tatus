@@ -1,0 +1,154 @@
+diff --git a/chap4-scanner.tex b/chap4-scanner.tex
+index 9cc469e..725f054 100644
+--- a/chap4-scanner.tex
++++ b/chap4-scanner.tex
+@@ -6,12 +6,12 @@
+ 
+ \paragraph{}
+ 
+-Security Team performs scans of various types of resources, such as devices, web servers, web sites, etc. As already discussed in chapter \ref{introduction}, it is impossible to scan these resources manually and there is a need for an Scanning Engine that would facilitate scheduling and running these scans, share the load across multiple scanning hosts in a fault-tolerant way, and combine results.
+-GNU parallel is a command-line utility for Unix-like operating systems that allows us to execute jobs concurrently locally or using remote computers. A job is typically a single command or a small script that has to be run for each of the lines in the input.\footnote{\url{http://savannah.gnu.org/projects/parallel}} It will be a trivial task to provide GNU parallel with a list of CERN resources (targets) and have the scans run concurrently.
++CERN security team performs scans of various types of resources, such as devices, web servers, web sites, etc. As already discussed in chapter \ref{introduction}, it is impossible to scan these resources manually and there is a need for an Scanning Engine that would facilitate scheduling and running these scans, share the load across multiple scanning hosts in a fault-tolerant way, and combine results.
++GNU parallel is a command-line utility for Unix-like operating systems that allows us to execute jobs concurrently locally or using remote computers. A job is typically a single command or a small script that has to be run for each of the lines in the input.\footnote{\url{http://savannah.gnu.org/projects/parallel}} It will be a trivial task to provide GNU parallel with a list of CERN resources and have the scans run on these resources concurrently.
+ \\ 
+ On the other hand, WASDOM as discussed in section \ref{sec:tools} contains various scripts for detecting misconfigurations, such as expired certificates and basic HTTP authentication, or vulnerabilities, such as Heartbleed\footnote{Critical OpenSSL security bug disclosed in 2014}. 
+ \\
+-There is a need for a tool to fill the gap between detection scripts and GNU parallel, making it possible to enable the permanent and automatic scanning of the resources. This tool (scanner) will act like a wrapper around detection scripts, standardizing the input and output format of the scripts, so that they can be used with GNU parallel and their results can be analyzed automatically. The Scanner should also make it possible to run a subset of available scripts on targets. Another objective of the Scanner is to make it as simple and quick as possible to add a new detection script, and run it on all CERN resources to ensure an acceptable detection/response speed when new vulnerabilities emerge.
++There is a need for a tool that fills the gap between detection scripts and GNU parallel, making it possible to enable the permanent and automatic scanning of the resources. This tool (the Scanner) will act like a wrapper around detection scripts, standardizing the input and output format of the scripts, so that they can be used with GNU parallel and their results can be analyzed automatically. The Scanner should also make it possible to run a subset of available detection scripts on targets. Another objective of the Scanner is to make it as simple and quick as possible to add a new detection script, and run it on all CERN resources to ensure an acceptable detection/response speed when new vulnerabilities emerge.
+ 
+ \subsection{Use Cases}
+ There are two major use cases for the Scanner:
+@@ -22,15 +22,14 @@ There are two major use cases for the Scanner:
+ 
+ \section{Scanner Specifications}
+ 
+-\paragraph{}
+-The Scanner runs a set of plugins (security tests) on a single target, and collects, combines and outputs plugins scan results. 
+-When calling the scanner, we ask it to scan a given resource type and name; the scanner ensures only plugins for that resource type will be executed. 
++The Scanner runs a set of security tests (called plugins from now on) on a single target, and collects, combines and outputs plugins scan results. When calling the scanner, we ask it to scan a given resource type and name; the scanner ensures only plugins for that resource type will be executed. 
+ 
+ \subsection{Plugin Specifications}
+-%chera hey oon ro check mikoni? aya mogheye periodame ye joorayi? na be nazaram. kollan akhlagham hamishe gande. in 
+-%ro zoodtar tamoom kon bere dige. 
+-% nimi az moshkelatam be nazaram ba raftane in adam hal mishe. 
+-\subsection{Resource Types}
++A plugin is a single security test for a given type of resource. After scanning a target resource, it says if a security problem was found or not (It can output more details when relevant). 
++
++\subsubsection{Resource Types}
++There are various types of resources at CERN. In most cases the plugins need to scan websites or web servers (or other devices), but our implementation of the Scanner is independent of the type of the resource that is being scanned. To avoid complexity, a given plugin should deal with only one type of resource. Occasionally, the same test will need to be developed for different type of resources (e.g default landing page test is needed for both web sites and web server/devices). In that case, the logic of the test should be shared, but still two separate scripts should be developed for each of resource type. For example, imagine that the script \texttt{landing\_page.py} contains the logic of testing for a default landing page on websites and web servers. A possible implementation would be two implement one script for websites \texttt{landing\_page\_site.sh} that runs `\texttt{./landing\_page.py -site \$1}' and one script for web servers \texttt{landing\_page\_server.sh} that runs `\texttt{./landing\_page.py -server \$1}' 
++
+ \subsection{Scanner Options}
+ \subsubsection{Examples}
+ 
+diff --git a/thesis.out b/thesis.out
+index 8b7f580..6ba6458 100644
+--- a/thesis.out
++++ b/thesis.out
+@@ -13,8 +13,7 @@
+ \BOOKMARK [2][-]{subsection.2.1.1}{Use Cases}{section.2.1}
+ \BOOKMARK [1][-]{section.2.2}{Scanner Specifications}{chapter.2}
+ \BOOKMARK [2][-]{subsection.2.2.1}{Plugin Specifications}{section.2.2}
+-\BOOKMARK [2][-]{subsection.2.2.2}{Resource Types}{section.2.2}
+-\BOOKMARK [2][-]{subsection.2.2.3}{Scanner Options}{section.2.2}
++\BOOKMARK [2][-]{subsection.2.2.2}{Scanner Options}{section.2.2}
+ \BOOKMARK [1][-]{section.2.3}{Implementation}{chapter.2}
+ \BOOKMARK [1][-]{section.2.4}{Results}{chapter.2}
+ \BOOKMARK [0][-]{chapter.3}{Vulnerability Notification Tool}{}
+diff --git a/thesis.toc b/thesis.toc
+index cea9246..0e26965 100644
+--- a/thesis.toc
++++ b/thesis.toc
+@@ -23,49 +23,48 @@
+ \contentsline {paragraph}{}{9}{section*.13}
+ \contentsline {subsection}{\numberline {2.1.1}Use Cases}{10}{subsection.2.1.1}
+ \contentsline {section}{\numberline {2.2}Scanner Specifications}{10}{section.2.2}
+-\contentsline {paragraph}{}{10}{section*.14}
+ \contentsline {subsection}{\numberline {2.2.1}Plugin Specifications}{10}{subsection.2.2.1}
+-\contentsline {subsection}{\numberline {2.2.2}Resource Types}{10}{subsection.2.2.2}
+-\contentsline {subsection}{\numberline {2.2.3}Scanner Options}{10}{subsection.2.2.3}
+-\contentsline {subsubsection}{Examples}{10}{section*.15}
+-\contentsline {section}{\numberline {2.3}Implementation}{10}{section.2.3}
+-\contentsline {section}{\numberline {2.4}Results}{10}{section.2.4}
+-\contentsline {chapter}{\numberline {3}Vulnerability Notification Tool}{11}{chapter.3}
+-\contentsline {section}{\numberline {3.1}Motivation}{11}{section.3.1}
+-\contentsline {paragraph}{}{11}{section*.16}
+-\contentsline {section}{\numberline {3.2}Source Evaluation}{12}{section.3.2}
+-\contentsline {paragraph}{}{12}{section*.17}
+-\contentsline {subsection}{\numberline {3.2.1}Approach}{12}{subsection.3.2.1}
+-\contentsline {paragraph}{}{12}{section*.18}
+-\contentsline {subsection}{\numberline {3.2.2}Vulnerability Sources}{13}{subsection.3.2.2}
+-\contentsline {paragraph}{}{13}{section*.19}
+-\contentsline {subsection}{\numberline {3.2.3}Conclusion}{15}{subsection.3.2.3}
+-\contentsline {section}{\numberline {3.3}National Vulnerability Database}{16}{section.3.3}
+-\contentsline {paragraph}{}{16}{section*.20}
+-\contentsline {subsection}{\numberline {3.3.1}Data Feeds}{16}{subsection.3.3.1}
+-\contentsline {subsection}{\numberline {3.3.2}Challenges}{17}{subsection.3.3.2}
+-\contentsline {subsubsection}{Downloading}{17}{section*.21}
+-\contentsline {subsubsection}{Modification Date}{17}{section*.22}
+-\contentsline {subsubsection}{Vulnerable Configuration}{18}{section*.23}
+-\contentsline {section}{\numberline {3.4}Product Name Matching}{18}{section.3.4}
+-\contentsline {subsection}{\numberline {3.4.1}Approach}{19}{subsection.3.4.1}
+-\contentsline {subsubsection}{Common Platform Enumerations}{19}{section*.24}
+-\contentsline {subsubsection}{WAD Product Names}{20}{section*.25}
+-\contentsline {subsubsection}{Challenges}{20}{section*.26}
+-\contentsline {subsection}{\numberline {3.4.2}Algorithm}{21}{subsection.3.4.2}
+-\contentsline {subsection}{\numberline {3.4.3}Evaluation}{23}{subsection.3.4.3}
+-\contentsline {subsubsection}{False Positives}{23}{section*.27}
+-\contentsline {subsubsection}{False Negatives}{23}{section*.28}
+-\contentsline {section}{\numberline {3.5}Vulnerable Resources}{23}{section.3.5}
+-\contentsline {paragraph}{}{23}{section*.29}
+-\contentsline {section}{\numberline {3.6}Output and Notifications}{24}{section.3.6}
+-\contentsline {paragraph}{}{24}{section*.30}
+-\contentsline {section}{\numberline {3.7}Results}{24}{section.3.7}
+-\contentsline {paragraph}{}{24}{section*.31}
+-\contentsline {paragraph}{}{24}{section*.32}
+-\contentsline {paragraph}{}{25}{section*.33}
+-\contentsline {chapter}{\numberline {4}Conclusion and Future Work}{31}{chapter.4}
+-\contentsline {chapter}{Bibliographie}{32}{chapter.4}
+-\contentsline {chapter}{\numberline {A}Annexes}{35}{appendix.A}
+-\contentsline {section}{\numberline {A.1}VNT Evaluation Method}{35}{section.A.1}
+-\contentsline {subsection}{\numberline {A.1.1}Calculating the Number of Vulnerabilities}{35}{subsection.A.1.1}
++\contentsline {subsubsection}{Resource Types}{10}{section*.14}
++\contentsline {subsection}{\numberline {2.2.2}Scanner Options}{11}{subsection.2.2.2}
++\contentsline {subsubsection}{Examples}{11}{section*.15}
++\contentsline {section}{\numberline {2.3}Implementation}{11}{section.2.3}
++\contentsline {section}{\numberline {2.4}Results}{11}{section.2.4}
++\contentsline {chapter}{\numberline {3}Vulnerability Notification Tool}{13}{chapter.3}
++\contentsline {section}{\numberline {3.1}Motivation}{13}{section.3.1}
++\contentsline {paragraph}{}{13}{section*.16}
++\contentsline {section}{\numberline {3.2}Source Evaluation}{14}{section.3.2}
++\contentsline {paragraph}{}{14}{section*.17}
++\contentsline {subsection}{\numberline {3.2.1}Approach}{14}{subsection.3.2.1}
++\contentsline {paragraph}{}{14}{section*.18}
++\contentsline {subsection}{\numberline {3.2.2}Vulnerability Sources}{15}{subsection.3.2.2}
++\contentsline {paragraph}{}{15}{section*.19}
++\contentsline {subsection}{\numberline {3.2.3}Conclusion}{17}{subsection.3.2.3}
++\contentsline {section}{\numberline {3.3}National Vulnerability Database}{18}{section.3.3}
++\contentsline {paragraph}{}{18}{section*.20}
++\contentsline {subsection}{\numberline {3.3.1}Data Feeds}{18}{subsection.3.3.1}
++\contentsline {subsection}{\numberline {3.3.2}Challenges}{19}{subsection.3.3.2}
++\contentsline {subsubsection}{Downloading}{19}{section*.21}
++\contentsline {subsubsection}{Modification Date}{19}{section*.22}
++\contentsline {subsubsection}{Vulnerable Configuration}{20}{section*.23}
++\contentsline {section}{\numberline {3.4}Product Name Matching}{20}{section.3.4}
++\contentsline {subsection}{\numberline {3.4.1}Approach}{21}{subsection.3.4.1}
++\contentsline {subsubsection}{Common Platform Enumerations}{21}{section*.24}
++\contentsline {subsubsection}{WAD Product Names}{22}{section*.25}
++\contentsline {subsubsection}{Challenges}{22}{section*.26}
++\contentsline {subsection}{\numberline {3.4.2}Algorithm}{23}{subsection.3.4.2}
++\contentsline {subsection}{\numberline {3.4.3}Evaluation}{25}{subsection.3.4.3}
++\contentsline {subsubsection}{False Positives}{25}{section*.27}
++\contentsline {subsubsection}{False Negatives}{25}{section*.28}
++\contentsline {section}{\numberline {3.5}Vulnerable Resources}{25}{section.3.5}
++\contentsline {paragraph}{}{25}{section*.29}
++\contentsline {section}{\numberline {3.6}Output and Notifications}{26}{section.3.6}
++\contentsline {paragraph}{}{26}{section*.30}
++\contentsline {section}{\numberline {3.7}Results}{26}{section.3.7}
++\contentsline {paragraph}{}{26}{section*.31}
++\contentsline {paragraph}{}{26}{section*.32}
++\contentsline {paragraph}{}{27}{section*.33}
++\contentsline {chapter}{\numberline {4}Conclusion and Future Work}{33}{chapter.4}
++\contentsline {chapter}{Bibliographie}{34}{chapter.4}
++\contentsline {chapter}{\numberline {A}Annexes}{37}{appendix.A}
++\contentsline {section}{\numberline {A.1}VNT Evaluation Method}{37}{section.A.1}
++\contentsline {subsection}{\numberline {A.1.1}Calculating the Number of Vulnerabilities}{37}{subsection.A.1.1}

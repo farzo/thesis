@@ -6,12 +6,12 @@
 
 \paragraph{}
 
-Security Team performs scans of various types of resources, such as devices, web servers, web sites, etc. As already discussed in chapter \ref{introduction}, it is impossible to scan these resources manually and there is a need for an Scanning Engine that would facilitate scheduling and running these scans, share the load across multiple scanning hosts in a fault-tolerant way, and combine results.
-GNU parallel is a command-line utility for Unix-like operating systems that allows us to execute jobs concurrently locally or using remote computers. A job is typically a single command or a small script that has to be run for each of the lines in the input.\footnote{\url{http://savannah.gnu.org/projects/parallel}} It will be a trivial task to provide GNU parallel with a list of CERN resources (targets) and have the scans run concurrently.
+CERN security team performs scans of various types of resources, such as devices, web servers, web sites, etc. As already discussed in chapter \ref{introduction}, it is impossible to scan these resources manually and there is a need for an Scanning Engine that would facilitate scheduling and running these scans, share the load across multiple scanning hosts in a fault-tolerant way, and combine results.
+GNU parallel is a command-line utility for Unix-like operating systems that allows us to execute jobs concurrently locally or using remote computers. A job is typically a single command or a small script that has to be run for each of the lines in the input.\footnote{\url{http://savannah.gnu.org/projects/parallel}} It will be a trivial task to provide GNU parallel with a list of CERN resources and have the scans run on these resources concurrently.
 \\ 
 On the other hand, WASDOM as discussed in section \ref{sec:tools} contains various scripts for detecting misconfigurations, such as expired certificates and basic HTTP authentication, or vulnerabilities, such as Heartbleed\footnote{Critical OpenSSL security bug disclosed in 2014}. 
 \\
-There is a need for a tool to fill the gap between detection scripts and GNU parallel, making it possible to enable the permanent and automatic scanning of the resources. This tool (scanner) will act like a wrapper around detection scripts, standardizing the input and output format of the scripts, so that they can be used with GNU parallel and their results can be analyzed automatically. The Scanner should also make it possible to run a subset of available scripts on targets. Another objective of the Scanner is to make it as simple and quick as possible to add a new detection script, and run it on all CERN resources to ensure an acceptable detection/response speed when new vulnerabilities emerge.
+There is a need for a tool that fills the gap between detection scripts and GNU parallel, making it possible to enable the permanent and automatic scanning of the resources. This tool (the Scanner) will act like a wrapper around detection scripts, standardizing the input and output format of the scripts, so that they can be used with GNU parallel and their results can be analyzed automatically. The Scanner should also make it possible to run a subset of available detection scripts on targets. Another objective of the Scanner is to make it as simple and quick as possible to add a new detection script, and run it on all CERN resources to ensure an acceptable detection/response speed when new vulnerabilities emerge.
 
 \subsection{Use Cases}
 There are two major use cases for the Scanner:
@@ -22,15 +22,14 @@ There are two major use cases for the Scanner:
 
 \section{Scanner Specifications}
 
-\paragraph{}
-The Scanner runs a set of plugins (security tests) on a single target, and collects, combines and outputs plugins scan results. 
-When calling the scanner, we ask it to scan a given resource type and name; the scanner ensures only plugins for that resource type will be executed. 
+The Scanner runs a set of security tests (called plugins from now on) on a single target, and collects, combines and outputs plugins scan results. When calling the scanner, we ask it to scan a given resource type and name; the scanner ensures only plugins for that resource type will be executed. 
 
 \subsection{Plugin Specifications}
-%chera hey oon ro check mikoni? aya mogheye periodame ye joorayi? na be nazaram. kollan akhlagham hamishe gande. in 
-%ro zoodtar tamoom kon bere dige. 
-% nimi az moshkelatam be nazaram ba raftane in adam hal mishe. 
-\subsection{Resource Types}
+A plugin is a single security test for a given type of resource. After scanning a target resource, it says if a security problem was found or not (It can output more details when relevant). 
+
+\subsubsection{Resource Types}
+There are various types of resources at CERN. In most cases the plugins need to scan websites or web servers (or other devices), but our implementation of the Scanner is independent of the type of the resource that is being scanned. To avoid complexity, a given plugin should deal with only one type of resource. Occasionally, the same test will need to be developed for different type of resources (e.g default landing page test is needed for both web sites and web server/devices). In that case, the logic of the test should be shared, but still two separate scripts should be developed for each of resource type. For example, imagine that the script \texttt{landing\_page.py} contains the logic of testing for a default landing page on websites and web servers. A possible implementation would be two implement one script for websites \texttt{landing\_page\_site.sh} that runs `\texttt{./landing\_page.py -site \$1}' and one script for web servers \texttt{landing\_page\_server.sh} that runs `\texttt{./landing\_page.py -server \$1}' 
+
 \subsection{Scanner Options}
 \subsubsection{Examples}
 
