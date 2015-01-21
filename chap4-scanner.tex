@@ -22,18 +22,310 @@ There are two major use cases for the Scanner:
 
 \section{Scanner Specifications}
 
-The Scanner runs a set of security tests (called plugins from now on) on a single target, and collects, combines and outputs plugins scan results. When calling the scanner, we ask it to scan a given resource type and name; the scanner ensures only plugins for that resource type will be executed. 
+The Scanner runs a set of security tests (called plugins from now on) on a single resource, and collects, combines and outputs plugins scan results. When calling the Scanner, we ask it to scan a given resource type and name; the scanner ensures only plugins for that resource type will be executed. 
 
 \subsection{Plugin Specifications}
-A plugin is a single security test for a given type of resource. After scanning a target resource, it says if a security problem was found or not (It can output more details when relevant). 
-
+A plugin is a single security test for a given type of resource. After scanning a target, it says if a security problem was found or not (It can output more details when relevant). 
+%delam gerefte ey doost, havaye gerye ba man...havaye gerye ba man...
 \subsubsection{Resource Types}
 There are various types of resources at CERN. In most cases the plugins need to scan websites or web servers (or other devices), but our implementation of the Scanner is independent of the type of the resource that is being scanned. To avoid complexity, a given plugin should deal with only one type of resource. Occasionally, the same test will need to be developed for different type of resources (e.g default landing page test is needed for both web sites and web server/devices). In that case, the logic of the test should be shared, but still two separate scripts should be developed for each of resource type. For example, imagine that the script \texttt{landing\_page.py} contains the logic of testing for a default landing page on websites and web servers. A possible implementation would be two implement one script for websites \texttt{landing\_page\_site.sh} that runs `\texttt{./landing\_page.py -site \$1}' and one script for web servers \texttt{landing\_page\_server.sh} that runs `\texttt{./landing\_page.py -server \$1}' 
+\subsubsection{Input}
+The Scanner will provide the plugin with the inputs when running it. Depending on the nature of the security test a plugin is performing, it might need different inputs. It is important that all plugins follow a convention about the way they receive the inputs, so that the Scanner can run all the plugins in the same way. The plugin can assume that it is going to receive the input in the following order: \{\texttt{IP/HostNAME PORT ALIAS URL}\}. The plugin can decide to ignore any of these input arguments, if irrelevant. Also, the Scanner might pass an empty string if the user does not specify a field.
+\\
+Additionally, plugins can be called with the following arguments instead of the target resource to scan:
+\texttt{--info} - returns plugin details in JSON format (see Figure ????)  
+\subsubsection{Output}
+It is important that the plugins follow a convention in their output format, so that the Scanner can analyze the results and group them, if necessary. After scanning a given target, each plugin should return the following information in JSON format (mandatory fields in bold): 
+\begin{itemize}
 
+
+   \item \textbf{result} (mandatory)- severity of the findings; one of these values (Any other value in the result will be accepted by the scanner, but a warning will be logged.):
+    \begin{itemize}
+    
+
+        \item \textit{SECURE} - there is no security problem
+        \item  \textit{VULNERABLE} - security problem detected
+        \item  \textit{WARNING} - there is something sub-optimal (e.g. a certificate expiring soon) but not a real security problem (yet)
+        \item  \textit{UNKNOWN} - results not available, test couldn't conclude (e.g. host unreachable)
+        \item  \textit{TIMEOUT} - results not available, test timed out. (The plugins do not have to detect timeouts as this can be done in the scanner level) 
+            \end{itemize}
+\item      \textbf{notes} (mandatory) - human-readable details of the scan result (e.g. which weak ciphers were detected, which URLs are affected)
+\item      target (recommended) - what was scanned: If the target information is provided by plugin it will be used to show more precise results, for example if a default port has been used, etc. The plugin can choose to report all or a subset of following:
+\begin{itemize}
+
+
+\item        host
+\item    port
+\item    alias
+\item    url 
+\end{itemize}
+\item    plugin info (recommended):
+\begin{itemize}
+\item        name
+\item    resource type
+\item    description - a one-line description of the plugin 
+\end{itemize}
+\end{itemize}
 \subsection{Scanner Options}
-\subsubsection{Examples}
+The Scanner will be directly used by security team members; therefore, it is important to design a robust user interface for it. The user can use the following options to customize Scanner parameters:
 
+\begin{itemize}
+
+\item 
+
+    \texttt{-l|-{}-list TYPE} - list all plugins available in the plugin directory 
+                       (for the given resource type(or all))
+\item                  
+    \texttt{-n|-{}-no-action} - don't scan    			     (list what will be scanned with which plugins)
+\item    \texttt{-q|-{}-quiet} - be quiet
+\item    \texttt{    -v|-{}-verbose LEVEL} - be more verbose 
+    	 				 (to the given verbosity level in the range of 1 to 5,
+    	 				  with 5 being the most verbose)
+\item    \texttt{    -t|-{}-timeout SECONDS} - set timeout per plugin (same for all plugins)
+\item    \texttt{    --plugin PLUGIN1.sh,PLUGIN2.py,PLUGIN3} - run selected plugins
+\item    \texttt{ -{}-plugin-list PLUGINS-FILE} - run plugins listed in the file (one line per plugin executable)
+\item    \texttt{  -{}-plugin-dir DIRECTORY} - look for plugins in this directory (default: /opt/scan/plugins)
+\item    \texttt{    -{}-log FILE} - log output (but not results) to a file instead on printing on standard output  
+
+\end{itemize}
+And the following options can be used to define the target resource:
+\begin{itemize}
+
+    \item    \texttt{-{}-device NAME} - scan the device (mandatory for devices)
+    \item    \texttt{-{}-website NAME} - scan the centrally hosted website (mandatory for websites)
+    \item    \texttt{-{}-account NAME} - scan the account (mandatory for accounts)
+    \item    \texttt{-{}-set NAME} - scan the set (mandatory for sets)
+    \item    \texttt{-{}-ip IPs} - set device target IP addresses (comma separated values)
+    \item    \texttt{-{}-port PORTs} - set device target port numbers (comma separated values)
+    \item    \texttt{-{}-alias ALIASes} - set device/website target aliases (comma separated values)
+    \item    \texttt{-{}-url URLs} - set device/website target urls (comma separated values). For devices a url means more like a directory on the device 
+   \end{itemize}
+   
+
+\subsection{Targets}
+A CERN resource can be composed of multiple targets. For example, a device can have multiple IP addresses, aliases, open ports or URLs and each combination of these fields can specify a scanning target. A plugin deals with only one target (a single hostname/alias,port, etc.) and it is the job of the Scanner to loop over all combinations of aliases, ports and urls when calling plugins .
+\subsubsection{Example}
+Consider the following command:
+
+\begin{table}[H]
+\begin{center}
+    \begin{tabular}{ c  l }
+
+
+\$ \texttt{./scanner.py} &  \texttt{-{}-plugin basic\_auth.py}  \\
+			   &  \texttt{-{}-device PCITDI86}  \\
+			   &  \texttt{-{}-ip 137.138.43.51,2001:1458::112:33} \\
+	           &  \texttt{-{}-port 80,443  }\\
+	           &   \texttt{-{}-alias CSC,PHOTOCLUB}  \\
+    	       &  \texttt{-{}-url /admin,/tmp}
+    	       
+	\end{tabular}
+    
+   \end{center}
+\end{table}
+\noindent
+This command is asking the Scanner to run the Basic Authentication plugin (which checks if the target is doing the authentication over HTTP instead of HTTPS) on a resource of type` device' and with the name `PCITDI86'. In addition, there are multiple IP addresses, aliases, ports and URLs that we would like to scan. The scanner is going to run the plugin 2*3*2*2=24 times on PCITDI86. Table \ref{table:targets} shows the different targets that will be scanned. 
+
+\begin{table}
+\begin{center}
+    \begin{tabular}{ | c | c | c | c |}
+    
+    \hline
+	  \hhline{|*4-}
+  \multicolumn{1}{|c|}{\cellcolor{LightBlue}\textbf{IP/Hostname}} & \multicolumn{1}{|c|}{\cellcolor{LightBlue}\textbf{Port}} 
+  & \multicolumn{1}{|c|}{\cellcolor{LightBlue}\textbf{Alias}} &    \multicolumn{1}{|c|}{\cellcolor{LightBlue}\textbf{URL}}    
+    \\ \hline
+
+   \multirow{12}{*}{137.138.43.51} &     \multirow{6}{*}{80} &     \multirow{2}{*}{PCITDI86} & /admin
+   \\
+    \cline{4-4}
+       &     &     & /tmp
+    \\
+     \cline{3-4}
+	& & \multirow{2}{*}{CSC} & /admin
+	\\
+	 \cline{4-4}
+       &     &     & /tmp
+    \\
+     \cline{3-4}
+ 	& & \multirow{2}{*}{PHOTOCLUB} & /admin
+	\\
+	 \cline{4-4}
+       &     &     & /tmp
+    \\
+     \cline{2-4}
+    
+    & \multirow{6}{*}{443} &     \multirow{2}{*}{PCITDI86} & /admin
+   \\
+    \cline{4-4}
+       &     &     & /tmp
+    \\
+     \cline{3-4}
+	& & \multirow{2}{*}{CSC} & /admin
+	\\
+	 \cline{4-4}
+       &     &     & /tmp
+    \\
+     \cline{3-4}
+ 	& & \multirow{2}{*}{PHOTOCLUB} & /admin
+	\\
+	 \cline{4-4}
+       &     &     & /tmp
+    \\
+     \cline{1-4}
+     
+     
+     
+     
+     
+     \multirow{12}{*}{2001:1458::112:33} &     \multirow{6}{*}{80} &     \multirow{2}{*}{PCITDI86} & /admin
+   \\
+    \cline{4-4}
+       &     &     & /tmp
+    \\
+     \cline{3-4}
+	& & \multirow{2}{*}{CSC} & /admin
+	\\
+	 \cline{4-4}
+       &     &     & /tmp
+    \\
+     \cline{3-4}
+ 	& & \multirow{2}{*}{PHOTOCLUB} & /admin
+	\\
+	 \cline{4-4}
+       &     &     & /tmp
+    \\
+     \cline{2-4}
+    
+    & \multirow{6}{*}{443} &     \multirow{2}{*}{PCITDI86} & /admin
+   \\
+    \cline{4-4}
+       &     &     & /tmp
+    \\
+     \cline{3-4}
+	& & \multirow{2}{*}{CSC} & /admin
+	\\
+	 \cline{4-4}
+       &     &     & /tmp
+    \\
+     \cline{3-4}
+ 	& & \multirow{2}{*}{PHOTOCLUB} & /admin
+	\\
+	 \cline{4-4}
+       &     &     & /tmp
+
+	
+        \\ \hline
+    \end{tabular}
+    \caption{Targets}
+    \label{table:targets}
+   \end{center}
+\end{table}
+
+For many plugins (e.g. Heartbleed) the URLs are irrelevant, while for others (e.g. basic\_authentication) the possibility to scan several URLs/subdirectories for a given hostname is very useful. Obviously, we want to avoid that the scanner loops over multiple URLs when scanning for Heartbleed. This means some plugins (e.g. Heartbleed and basic-authentication) should not be used together for the same target details, but rather separately: 
+
+\begin{table}[H]
+    \begin{tabular}{ c  l }
+
+
+\$ \texttt{./scanner.py} & \texttt{-{}-plugin-list https-plugins.txt} \\
+  & \texttt{-{}-device PCITDI86} \\
+  & \texttt{-{}-alias CSC,PHOTOCLUB}\\
+  & \texttt{-{}-port 443,8123}\\
+  \\
+  
+    	       \$ \texttt{./scanner.py} & \texttt{-{}-plugin basic-auth.py} \\
+  & \texttt{-{}-device PCITDI86} \\
+  & \texttt{-{}-alias CSC,PHOTOCLUB}\\
+  & \texttt{-{}-port 80,443,8123}\\
+    	       & \texttt{-{}-url /admin,/tmp}
+    	       
+	\end{tabular}
+    
+\end{table}
+\noindent
+If, incidentally or pressed by an emergency, we call the scanner and provide ``too many" details for plugins which don't need them, things should still work. We just risk waiting for the results a bit longer, and getting duplicated results.
+\subsection{Output}
+The Scanner prints exactly one line per target and vulnerability, semicolon-separated values:
+\begin{verbatim}
+resource_type;resource_name;plugin_name;result;notes;targets
+\end{verbatim}
+Targets from the same resource with the same scanning results (results and notes) will be grouped into one line. This gives the plugin designer the opportunity to decide on grouping. For example, if the plugin designer includes the port number in the notes, the targets with the same results but different port numbers will be reported in two different lines. This is useful, because the grouping very much depends on the nature of the test the plugin is running. For example, in the case of Heartbleed, the plugin designer would prefer to include the IP address and port number in the notes, but ignore the URLs. On the other hand, landing\_page plugin would report the complete target fields, including URLs, in the notes.
+\subsubsection{Examples}
+The following command checks if the device uses SSL3\footnote{Using SSL version 3 can be an indicator of being vulnerable to POODLE}
+\begin{table}[H]
+
+    \begin{tabular}{ c  l }
+
+
+\$ \texttt{./scanner.py} & \texttt{-{}-plugin detect\_ssl3.py } \\
+  & \texttt{-{}-device lcg-argus} \\
+  & \texttt{-{}-port 443,8443}    	       
+	\end{tabular}    
+
+\end{table}
+\noindent
+The output of the scan is: 
+\\
+\texttt{
+\#resource\_type;resource\_name;test\_name;result;notes;target}
+\\
+\\
+\texttt{device;lcg-argus;detect\_ssl3;VULNERABLE;SSLv3 is enabled on lcg-argus:443;[lcg-argus:443]}
+\\
+\\
+\texttt{device;lcg-argus;detect\_ssl3;VULNERABLE;SSLv3 is enabled on lcg-argus:8443;[lcg-argus:8443]}
+\\
+\\
+As you can see, for each scan a different result line is printed, because the plugin reports the device name and port in the notes. 
+This other example checks for a default landing page on a web server:
+\begin{table}[H]
+
+    \begin{tabular}{ c  l }
+
+
+\$ \texttt{./scanner.py} & \texttt{-{}-plugin landing\_page.py } \\
+  & \texttt{-{}-device pcitdi86} \\
+  & \texttt{-{}-alias pcitdi86-alias}\\    	       
+    & \texttt{-{}-url /index.html}\\ 
+	\end{tabular}    
+
+\end{table}
+\noindent
+The output will be:
+\\
+\texttt{
+\#resource\_type;resource\_name;test\_name;result;notes;targets}
+\\
+\\
+\texttt{
+device;pcitdi86;landing\_page;SECURE;The target does not use an empty or default page;[pcitdi86-alias(pcitdi86):80/index.html,pcitdi86:80/index.html]
+}
+\\
+In this case, the scanning results of the two targets (with different aliases) are grouped into one line.
+If the scanner faces a problem while running the plugin (plugin crash, output not parsable, etc) it will report a line with the result FAIL. Also, if the user defines a timeout (via --timeout) and a timeout occurs while running the plugin, it will be reported in final results.
+\\ 
+\texttt{device;pcitdi87;landing\_page;TIMEOUT;plugin timeout after X ms;[....target...]}
+\\
+\\
+\texttt{device;pcitdi88;landing\_page;FAIL;There was a problem parsing plugin output(error code 127);[....target...]}
+\\
+\\
 \section{Implementation}
+\subsection{Directory Structure}
+The plugins directory can be set by using the option --plugin-dir. Each plugin should be placed in its corresponding resource type directory. Therefore, the plugins directory contains the following sub-directories:
+\begin{itemize}
+
+
+   \item \texttt{/device}
+    \item \texttt{/web}
+    \item \texttt{/account}
+    \item \texttt{/site} 
+    
+    \end{itemize}
+
+note that all executable files in these directories are considered plugins. In particular, they all will be executed(!), when we call \texttt{./scanner.py -{}-list TYPE}
+
 \section{Results}
 Is there any?
 
