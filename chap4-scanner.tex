@@ -33,9 +33,9 @@ There are various types of resources at CERN. In most cases the plugins need to 
 The Scanner will provide the plugin with the inputs when running it. Depending on the nature of the security test a plugin is performing, it might need different inputs. It is important that all plugins follow a convention about the way they receive the inputs, so that the Scanner can run all the plugins in the same way. The plugin can assume that it is going to receive the input in the following order: \{\texttt{IP/HostNAME PORT ALIAS URL}\}. The plugin can decide to ignore any of these input arguments, if irrelevant. Also, the Scanner might pass an empty string if the user does not specify a field.
 \\
 Additionally, plugins can be called with the following arguments instead of the target resource to scan:
-\texttt{--info} - returns plugin details in JSON format (see Figure ????)  
+\texttt{--info} - returns plugin details in JSON format (see Figure \ref{figure:plugin-info})  
 \subsubsection{Output}
-It is important that the plugins follow a convention in their output format, so that the Scanner can analyze the results and group them, if necessary. After scanning a given target, each plugin should return the following information in JSON format (mandatory fields in bold): 
+It is important that the plugins follow a convention in their output format, so that the Scanner can analyze the results and group them, if necessary. Figure \ref{figure:plugin-results} illustrates a sample plugin output. After scanning a given target, each plugin should return the following information in JSON format (mandatory fields in bold): 
 \begin{itemize}
 
 
@@ -66,6 +66,25 @@ It is important that the plugins follow a convention in their output format, so 
 \item    description - a one-line description of the plugin 
 \end{itemize}
 \end{itemize}
+
+\begin{figure}[h!]
+\label{figure:plugin-info}
+  \centering
+    \includegraphics[width=1.0\textwidth]{plugin-info}
+  \caption{Plugin Information}
+  
+\end{figure}
+
+\begin{figure}[h!]
+\label{figure:plugin-results}
+  \centering
+    \includegraphics[width=1.0\textwidth]{plugin-results}
+  \caption{Plugin Output}
+  
+\end{figure}
+
+
+
 \subsection{Scanner Options}
 The Scanner will be directly used by security team members; therefore, it is important to design a robust user interface for it. The user can use the following options to customize Scanner parameters:
 
@@ -101,6 +120,7 @@ And the following options can be used to define the target resource:
     \item    \texttt{-{}-url URLs} - set device/website target urls (comma separated values). For devices a url means more like a directory on the device 
    \end{itemize}
    
+
 
 \subsection{Targets}
 A CERN resource can be composed of multiple targets. For example, a device can have multiple IP addresses, aliases, open ports or URLs and each combination of these fields can specify a scanning target. A plugin deals with only one target (a single hostname/alias,port, etc.) and it is the job of the Scanner to loop over all combinations of aliases, ports and urls when calling plugins .

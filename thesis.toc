@@ -28,13 +28,13 @@
 \contentsline {subsubsection}{Input}{11}{section*.15}
 \contentsline {subsubsection}{Output}{11}{section*.16}
 \contentsline {subsection}{\numberline {2.2.2}Scanner Options}{12}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Targets}{13}{subsection.2.2.3}
-\contentsline {subsubsection}{Example}{13}{section*.17}
-\contentsline {subsection}{\numberline {2.2.4}Output}{15}{subsection.2.2.4}
-\contentsline {subsubsection}{Examples}{15}{section*.18}
-\contentsline {section}{\numberline {2.3}Implementation}{17}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Directory Structure}{17}{subsection.2.3.1}
-\contentsline {section}{\numberline {2.4}Results}{17}{section.2.4}
+\contentsline {subsection}{\numberline {2.2.3}Targets}{14}{subsection.2.2.3}
+\contentsline {subsubsection}{Example}{14}{section*.17}
+\contentsline {subsection}{\numberline {2.2.4}Output}{16}{subsection.2.2.4}
+\contentsline {subsubsection}{Examples}{16}{section*.18}
+\contentsline {section}{\numberline {2.3}Implementation}{18}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Directory Structure}{18}{subsection.2.3.1}
+\contentsline {section}{\numberline {2.4}Results}{18}{section.2.4}
 \contentsline {chapter}{\numberline {3}Vulnerability Notification Tool}{19}{chapter.3}
 \contentsline {section}{\numberline {3.1}Motivation}{19}{section.3.1}
 \contentsline {paragraph}{}{19}{section*.19}
