@@ -1,14 +1,29 @@
 \chapter{Introduction}
 \label{introduction}
 \thispagestyle{empty}
-
-\begin{itemize}
-\item Big number of websites and web servers
-\item increasing number of vulnerabilities
-\item importance of detecting vulnerable applications
-\end{itemize}
+\paragraph{}
+Web applications are getting more and more popular. One can think of different reasons for this increase in popularity: ubiquity of web browsers makes it convenient to use them as a client; web applications can be updated and maintained locally with no need to distribute or install software on client side and web applications are cross-platform compatible.
+Another reason for the increasing popularity of web applications is the simplicity of developing them. Nowadays there are many web application frameworks and content management systems that facilitate rapid application development. This simplicity comes with a cost: securing a web application is difficult. Web applications include code that resides on the Web servers, application servers, databases, and back-end systems of an organization. The potential for a security breech exists in each of these layers. This opens the door to attackers trying to manipulate the application logic to achieve their needs\cite{secure_web}.
+\paragraph{}
+Even if a web application is developed as secure as possible, it is important to keep it secure by constantly checking for newly discovered vulnerabilities and make sure that our application is not affected. This task is easier if we manage the web application in each layer ourselves and we are aware of all the technologies that are used in an application; however, in many organizations like CERN, any employee can set up a web server or launch a website. It is the job of the Computer Security team to scan these various web servers and websites and detect any possible vulnerability remotely.
+\paragraph{}
+This project aims at enhancing the procedures for detection of misconfigurations and vulnerabilities at CERN computer resources by introducing two new tools. Chapter \ref{scanner} introduces a new tool to facilitate scanning the resources for misconfigurations and critical vulnerabilities. Chapter \ref{vulnerability-notification-tool} introduces a new approach for finding vulnerable resources by taking advantage of publicly available vulnerability sources.
 
 \section{Definitions}
+
+\textbf{Vulnerability}: According to CVE MITRE, a vulnerability is a mistake in software that can be directly used by a hacker to gain access to a system or network. A vulnerability would allow an attacker to:
+\begin{itemize}
+\item execute commands as another user
+\item access data that is contrary to the specified access restrictions for that data
+\item pose as another entity
+\item conduct a denial of service
+\end{itemize}
+
+Mis configuration
+
+Web application
+vulnerability source
+
 if there are some literature to explain. what is a vulnerability for example?
 
 What is a vulnerability? Terminology? (useful for the thesis) 
