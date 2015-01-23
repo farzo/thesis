@@ -30,11 +30,22 @@ What is a vulnerability? Terminology? (useful for the thesis)
 \url{http://cve.mitre.org/about/terminology.html#Dist}\url{http://www.osvdb.org/vuln_standards}
 
 \section{CERN Web Landscape}
-Web applications are getting much more popular . they are easy to develop but not so easy to to develop securely
-vulnerable web app can make the server, database, internal network, data etc. insecure
-they are publicly available
-easy target for attackers
 
+CERN provides different web services, such as web authoring and web publishing for its users. The purpose of Web-services\footnote{\url{http://cern.ch/web}} at CERN is to avoid website duplication and locally managed web servers, as well as proposing standard web authoring technologies. From the security point of view, using web services rather than setting up a locally managed web server is recommended, because central web servers are monitored regularly with security scans. If a vulnerability in any software used on web servers occur, it is easier to patch the central server, rather than obliging individuals to patch their local web server. However, there is no restriction on setting up a local web server and any employee can host his websites on a local web server. 
+
+\subsection{CERN Websites}
+There are more than 13K websites at CERN that are centrally hosted by web-services. These websites have a URL in the format of \url{http://cern.ch/X} or \url{http://X.web.cern.ch}, where X is the name of the website. CERN homepage at \url{http://home.web.cern.ch/} is an example of websites that are hosted centrally. When creating a new website the user can choose the type of the website from the following list:
+\begin{itemize}
+\item \textbf{Centrally Hosted on DFS\footnote{Distributed File System}}: This type is recommended for Windows users. DFS site is linked to a dedicated DFS folder where the user can edit files as she please with any authoring tool she may have.
+\item \textbf{AFS\footnote{Andrew File System} Folder}: This type is recommended for Linux users. Each AFS site is related to an AFS folder.
+\item \textbf{Collaboration Workspace (SharePoint)}: This type is suitable to easily create a collaboration platform to work within teams.
+\item \textbf{Social Community}: This type is used to create communities about topics, find answers to questions and connect with others.
+\item \textbf{Drupal}: This type provides a Content Management System to publish, edit and organize content through a common web interface.
+\item \textbf{Java MiddleWare On Demand site}:This is the type of site if the user needs a Java solution for deploying servlets or JSP web applications.
+\end{itemize}
+The servers hosting these websites, are monitored by web-services team to stay secure. For example, if a vulnerability in Drupal is discovered the Drupal team will make sure that all Drupal websites are patched immediately. However, each website owner can customize or configure his website to use technologies that might threaten its security. It is the job of the Computer Security team to scan individual websites and look for vulnerabilities. 
+\subsection{Non-central Web Servers}
+CERN landscape is not limited to the central web servers and websites hosted centrally through Web-services. There are more than 1k instances of dedicated web servers at CERN in the format of \url{http://X.cern.ch} where X is the server name. Indico\footnote{CERN tool for managing conferences, workshops and meetings} at \url{http://indico.cern.ch/} is an example of a dedicated web server. Most of the websites hosted on Non-central web servers are only visible inside CERN. Others have firewall openings and are accessible from internet.
 \subsection{Web Application Stack}
 vulnerability can occur in each of the layers
 \begin{itemize}
@@ -53,67 +64,29 @@ examples of each
 if out of the box the vulnerabilities are usually discovered and reported in the public.
 internally developed ones need to be checked before open to outside
 
-\subsection{CERN Websites}
-There are two types of websites and web servers used at CERN.
-\subsubsection{centrally hosted websites}
-These websites are hosted centrally by the IT department. Currently there are about 13k instances of these websites. Each of them has a URL in the format of \texttt{\url{http://cern.ch/X}} or \texttt{\url{http://X.web.cern.ch}}, where X is the name of the website. Examples like \url{http://home.web.cern.ch/}. Managed by WebServices \url{http://cern.ch/web} and could have various types 
-(file/application hosting:)
 
-IIS (Windows), files on DFS ( PHP, ASP)
-
-Apache (Linux), files on AFS(PHP, CGI)
-
-J2EE(Java) 
-CMS (Content Management Systems) (Drupal) PHP
-SharePoint
-Social community
-
-
-
-
-
-
-
-
-
-
-
-different types ... explain!
-\subsubsection{Non Centrally Hosted}
-
-On the other hand, one can find between 10k to 20k instances of dedicated web servers at CERN (?) in the format of \url{http://X.cern.ch} and examples like \url{http://indico.cern.ch/}
-
-Any technology stack (OS, web server, application platform
-and frameworks etc. etc.)
-Many visible only inside CERN
-
-Others have firewall openings
-
-visible from outside
-
-[[Some numbers and figures about each category]]
 
 
 \section{CERN Web Security}
-current approach to ensure the security of the web applications
+The vulnerabilities in web applications can reside from three main areas. A misconfiguration on the server side, such as using weak ciphers or expired certificates can leave a door open for attackers. secondly vulnerabilities can be a consequence of wrong development choices. Not considering security concerns during the design and development phase can result into an application that is a target for vulnerabilities like cross-site scripting (XSS). In some other cases, the web application is using a vulnerable third party software, e.g. an outdated Drupal instance, that needs to be updated or patched. CERN Computer Security team uses various tools and procedures to prevent exposure of vulnerable web applications to the world outside the organization. Also, it is important to detect any vulnerabilities in web applications as soon as possible and take necessary actions to secure the whole web infrastructure at CERN.
+
+% Fiesty :-) 
 \subsection{Prevention}
-people are encouraged to use the central services. explain why?
-firewall opening procedure
+In order to lower the probability of developing vulnerable software, users are encouraged to use central Web-services to create websites. In addition, whenever a website is being published on the Internet and is accessible from outside CERN network it has to go through the firewall opening procedure to make sure it has a high level of security. In the firewall opening procedure, a member of the security team analyzes the case completely to make sure that the request is reasonable, e.g. there are enough reasons for not using the central Web-services. Additionally, tools like OpenVas\footnote{Open Vulnerability Assesment System} and skipfish are used to scan the website and report the vulnerabilities and warnings back to the owner of the website. 
 
 \subsection{Detection}
-two main areas where the vulnerabilities emerge
-\subsubsection{Detection Scripts}
-small scripts that are developed inside to detect vulnerable sources, most of the time when a new vuln is announced( heart bleed, shell shock, ssl3) and there is no patch yet, but some times also for mis-configuration detection (empty landing page, http authentication)
-\subsubsection{Published Vulnerabilities}
-vulnerabilities affecting a third part software and published in mailing lists, other sources, etc. example wordpress
-usually the vulnerabilities that are from well known software, human decision if we are going to care about the vulnerability and checking if the affected software is used at CERN.
+Whenever a new vulnerability is published, it is a part of the CERN Computer Security team job to find affected resources and notify their owners. Currently the Computer Security team members get informed about new vulnerabilities by subscribing to product mailing lists, security forums, twitter accounts, etc. If they decide that a vulnerability is worth investigating the next step is to scan the whole web infrastructure for the vulnerable resources. For this purpose, small detection scripts are developed or downloaded (e.g. Heartbleed vulnerability or ShellShock\footnote{Critical Shell vulnerability discovered in September 2014}). Sometimes the detection scripts look for misconfigurations, such as empty landing page or HTTP authentication. 
 
-\subsection{Relevant Tools}
+
+\section{Relevant Tools}
 \label{sec:tools}
-\subsubsection{WAS}
+There are various tools that are being used by CERN Computer Security team to ensure the security of CERN resources. In this section I am going to give a short description of the tools that are relevant to this project and are mentioned in the following chapters. 
+\subsection{Web application Scanner} 
+Web Application Scanner (WAS) is a tool that can be used to generate a list of all web servers and websites at CERN, run skipfish\footnote{Google open source web application vulnerability scanner} web scanner on a URL and report warnings and vulnerabilities, or run Web Application Detection (WAD) tool to detect technologies used in a particular website or web server.
+\subsection{Web Application Detection}
+CERN Web landscape - both web servers and centrally-hosted websites - are regularly scanned with Web Application Detection (WAD) tool, in order to detect web applications and technologies being used, and possibly also their versions. This tool is developed using an open source project called "Wappalyzer"\footnote{\url{https://github.com/ElbertF/Wappalyzer}}. Wappalyzer is a cross-platform utility that uncovers the technologies, such as content management systems, eCommerce platforms, web servers,etc. used on websites.  Wappalyzer uses a set of predefined rules to detect technologies and these rules are stored in a JSON file. WAD uses this JSON file to detect technologies at CERN. Figure ... illustrates a detection rule used to detect Indico instances. It checks for a special cookie name or uses regular expressions to the find name Indico in the footers of the website. 
 \subsubsection{WASDOM}
-\subsubsection{List of websites and webservers}
-\subsubsection{WAD and Wappalyzer}
+
 \label{wad_section}
 wana talk abut pushing upstream?
 \subsubsection{SSDB?}

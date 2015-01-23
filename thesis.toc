@@ -4,74 +4,73 @@
 \contentsline {paragraph}{}{5}{section*.5}
 \contentsline {section}{\numberline {1.1}Definitions}{6}{section.1.1}
 \contentsline {section}{\numberline {1.2}CERN Web Landscape}{7}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Web Application Stack}{7}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.2.2}CERN Websites}{7}{subsection.1.2.2}
-\contentsline {subsubsection}{centrally hosted websites}{7}{section*.6}
-\contentsline {subsubsection}{Non Centrally Hosted}{8}{section*.7}
-\contentsline {section}{\numberline {1.3}CERN Web Security}{8}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Prevention}{8}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Detection}{8}{subsection.1.3.2}
-\contentsline {subsubsection}{Detection Scripts}{8}{section*.8}
-\contentsline {subsubsection}{Published Vulnerabilities}{8}{section*.9}
-\contentsline {subsection}{\numberline {1.3.3}Relevant Tools}{9}{subsection.1.3.3}
-\contentsline {subsubsection}{WAS}{9}{section*.10}
-\contentsline {subsubsection}{WASDOM}{9}{section*.11}
-\contentsline {subsubsection}{List of websites and webservers}{9}{section*.12}
-\contentsline {subsubsection}{WAD and Wappalyzer}{9}{section*.13}
-\contentsline {subsubsection}{SSDB?}{9}{section*.14}
-\contentsline {subsubsection}{Auto-notify?}{9}{section*.15}
-\contentsline {section}{\numberline {1.4}Objectives}{9}{section.1.4}
-\contentsline {chapter}{\numberline {2}Scanner}{11}{chapter.2}
-\contentsline {section}{\numberline {2.1}Motivation}{11}{section.2.1}
-\contentsline {paragraph}{}{11}{section*.16}
-\contentsline {subsection}{\numberline {2.1.1}Use Cases}{12}{subsection.2.1.1}
-\contentsline {section}{\numberline {2.2}Scanner Specifications}{12}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Plugin Specifications}{12}{subsection.2.2.1}
-\contentsline {subsubsection}{Resource Types}{12}{section*.17}
-\contentsline {subsubsection}{Input}{13}{section*.18}
-\contentsline {subsubsection}{Output}{13}{section*.19}
-\contentsline {subsection}{\numberline {2.2.2}Scanner Options}{14}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Targets}{16}{subsection.2.2.3}
-\contentsline {subsubsection}{Example}{16}{section*.20}
-\contentsline {subsection}{\numberline {2.2.4}Output}{18}{subsection.2.2.4}
-\contentsline {subsubsection}{Examples}{18}{section*.21}
-\contentsline {section}{\numberline {2.3}Conclusion}{20}{section.2.3}
-\contentsline {chapter}{\numberline {3}Vulnerability Notification Tool}{21}{chapter.3}
-\contentsline {section}{\numberline {3.1}Motivation}{21}{section.3.1}
-\contentsline {paragraph}{}{21}{section*.22}
-\contentsline {section}{\numberline {3.2}Source Evaluation}{22}{section.3.2}
-\contentsline {paragraph}{}{22}{section*.23}
-\contentsline {subsection}{\numberline {3.2.1}Approach}{22}{subsection.3.2.1}
-\contentsline {paragraph}{}{22}{section*.24}
-\contentsline {subsection}{\numberline {3.2.2}Vulnerability Sources}{23}{subsection.3.2.2}
-\contentsline {paragraph}{}{23}{section*.25}
-\contentsline {subsection}{\numberline {3.2.3}Conclusion}{25}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}National Vulnerability Database}{26}{section.3.3}
-\contentsline {paragraph}{}{26}{section*.26}
-\contentsline {subsection}{\numberline {3.3.1}Data Feeds}{26}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Challenges}{27}{subsection.3.3.2}
-\contentsline {subsubsection}{Downloading}{27}{section*.27}
-\contentsline {subsubsection}{Modification Date}{27}{section*.28}
-\contentsline {subsubsection}{Vulnerable Configuration}{28}{section*.29}
-\contentsline {section}{\numberline {3.4}Product Name Matching}{28}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Approach}{29}{subsection.3.4.1}
-\contentsline {subsubsection}{Common Platform Enumerations}{29}{section*.30}
-\contentsline {subsubsection}{WAD Product Names}{30}{section*.31}
-\contentsline {subsubsection}{Challenges}{30}{section*.32}
-\contentsline {subsection}{\numberline {3.4.2}Algorithm}{31}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Evaluation}{33}{subsection.3.4.3}
-\contentsline {subsubsection}{False Positives}{33}{section*.33}
-\contentsline {subsubsection}{False Negatives}{33}{section*.34}
-\contentsline {section}{\numberline {3.5}Vulnerable Resources}{33}{section.3.5}
-\contentsline {paragraph}{}{33}{section*.35}
-\contentsline {section}{\numberline {3.6}Output and Notifications}{34}{section.3.6}
-\contentsline {paragraph}{}{34}{section*.36}
-\contentsline {section}{\numberline {3.7}Results}{34}{section.3.7}
-\contentsline {paragraph}{}{34}{section*.37}
-\contentsline {paragraph}{}{34}{section*.38}
-\contentsline {paragraph}{}{35}{section*.39}
-\contentsline {chapter}{\numberline {4}Conclusion and Future Work}{41}{chapter.4}
-\contentsline {chapter}{Bibliographie}{42}{chapter.4}
-\contentsline {chapter}{\numberline {A}Annexes}{45}{appendix.A}
-\contentsline {section}{\numberline {A.1}VNT Evaluation Method}{45}{section.A.1}
-\contentsline {subsection}{\numberline {A.1.1}Calculating the Number of Vulnerabilities}{45}{subsection.A.1.1}
+\contentsline {subsection}{\numberline {1.2.1}CERN Websites}{7}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Non-central Web Servers}{8}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Web Application Stack}{8}{subsection.1.2.3}
+\contentsline {section}{\numberline {1.3}CERN Web Security}{9}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Prevention}{9}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Detection}{9}{subsection.1.3.2}
+\contentsline {subsubsection}{Detection Scripts}{10}{section*.6}
+\contentsline {subsubsection}{Published Vulnerabilities}{10}{section*.7}
+\contentsline {subsection}{\numberline {1.3.3}Relevant Tools}{10}{subsection.1.3.3}
+\contentsline {subsubsection}{WAS}{10}{section*.8}
+\contentsline {subsubsection}{WASDOM}{10}{section*.9}
+\contentsline {subsubsection}{List of websites and webservers}{10}{section*.10}
+\contentsline {subsubsection}{WAD and Wappalyzer}{10}{section*.11}
+\contentsline {subsubsection}{SSDB?}{10}{section*.12}
+\contentsline {subsubsection}{Auto-notify?}{10}{section*.13}
+\contentsline {section}{\numberline {1.4}Objectives}{10}{section.1.4}
+\contentsline {chapter}{\numberline {2}Scanner}{13}{chapter.2}
+\contentsline {section}{\numberline {2.1}Motivation}{13}{section.2.1}
+\contentsline {paragraph}{}{13}{section*.14}
+\contentsline {subsection}{\numberline {2.1.1}Use Cases}{14}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.2}Scanner Specifications}{14}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Plugin Specifications}{14}{subsection.2.2.1}
+\contentsline {subsubsection}{Resource Types}{14}{section*.15}
+\contentsline {subsubsection}{Input}{15}{section*.16}
+\contentsline {subsubsection}{Output}{15}{section*.17}
+\contentsline {subsection}{\numberline {2.2.2}Scanner Options}{16}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Targets}{18}{subsection.2.2.3}
+\contentsline {subsubsection}{Example}{18}{section*.18}
+\contentsline {subsection}{\numberline {2.2.4}Output}{20}{subsection.2.2.4}
+\contentsline {subsubsection}{Examples}{20}{section*.19}
+\contentsline {section}{\numberline {2.3}Conclusion}{22}{section.2.3}
+\contentsline {chapter}{\numberline {3}Vulnerability Notification Tool}{23}{chapter.3}
+\contentsline {section}{\numberline {3.1}Motivation}{23}{section.3.1}
+\contentsline {paragraph}{}{23}{section*.20}
+\contentsline {section}{\numberline {3.2}Source Evaluation}{24}{section.3.2}
+\contentsline {paragraph}{}{24}{section*.21}
+\contentsline {subsection}{\numberline {3.2.1}Approach}{24}{subsection.3.2.1}
+\contentsline {paragraph}{}{24}{section*.22}
+\contentsline {subsection}{\numberline {3.2.2}Vulnerability Sources}{25}{subsection.3.2.2}
+\contentsline {paragraph}{}{25}{section*.23}
+\contentsline {subsection}{\numberline {3.2.3}Conclusion}{27}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}National Vulnerability Database}{28}{section.3.3}
+\contentsline {paragraph}{}{28}{section*.24}
+\contentsline {subsection}{\numberline {3.3.1}Data Feeds}{28}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Challenges}{29}{subsection.3.3.2}
+\contentsline {subsubsection}{Downloading}{29}{section*.25}
+\contentsline {subsubsection}{Modification Date}{29}{section*.26}
+\contentsline {subsubsection}{Vulnerable Configuration}{30}{section*.27}
+\contentsline {section}{\numberline {3.4}Product Name Matching}{30}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Approach}{31}{subsection.3.4.1}
+\contentsline {subsubsection}{Common Platform Enumerations}{31}{section*.28}
+\contentsline {subsubsection}{WAD Product Names}{32}{section*.29}
+\contentsline {subsubsection}{Challenges}{32}{section*.30}
+\contentsline {subsection}{\numberline {3.4.2}Algorithm}{33}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Evaluation}{35}{subsection.3.4.3}
+\contentsline {subsubsection}{False Positives}{35}{section*.31}
+\contentsline {subsubsection}{False Negatives}{35}{section*.32}
+\contentsline {section}{\numberline {3.5}Vulnerable Resources}{35}{section.3.5}
+\contentsline {paragraph}{}{35}{section*.33}
+\contentsline {section}{\numberline {3.6}Output and Notifications}{36}{section.3.6}
+\contentsline {paragraph}{}{36}{section*.34}
+\contentsline {section}{\numberline {3.7}Results}{36}{section.3.7}
+\contentsline {paragraph}{}{36}{section*.35}
+\contentsline {paragraph}{}{36}{section*.36}
+\contentsline {paragraph}{}{37}{section*.37}
+\contentsline {chapter}{\numberline {4}Conclusion and Future Work}{43}{chapter.4}
+\contentsline {chapter}{Bibliographie}{44}{chapter.4}
+\contentsline {chapter}{\numberline {A}Annexes}{47}{appendix.A}
+\contentsline {section}{\numberline {A.1}VNT Evaluation Method}{47}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Calculating the Number of Vulnerabilities}{47}{subsection.A.1.1}
