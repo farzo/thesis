@@ -1,3 +1,8 @@
+% take care of the definition part
+% WASDOM I hate its name
+%khoondane scanner va in intorduction va fix kardaneshoon. badesh befrestam joftesh ro vase oona
+% fix kardane VNT va neveshtane conclusion
+% rahayi (amadegi vase google) 
 \chapter{Introduction}
 \label{introduction}
 \thispagestyle{empty}
@@ -46,26 +51,6 @@ There are more than 13K websites at CERN that are centrally hosted by web-servic
 The servers hosting these websites, are monitored by web-services team to stay secure. For example, if a vulnerability in Drupal is discovered the Drupal team will make sure that all Drupal websites are patched immediately. However, each website owner can customize or configure his website to use technologies that might threaten its security. It is the job of the Computer Security team to scan individual websites and look for vulnerabilities. 
 \subsection{Non-central Web Servers}
 CERN landscape is not limited to the central web servers and websites hosted centrally through Web-services. There are more than 1k instances of dedicated web servers at CERN in the format of \url{http://X.cern.ch} where X is the server name. Indico\footnote{CERN tool for managing conferences, workshops and meetings} at \url{http://indico.cern.ch/} is an example of a dedicated web server. Most of the websites hosted on Non-central web servers are only visible inside CERN. Others have firewall openings and are accessible from internet.
-\subsection{Web Application Stack}
-vulnerability can occur in each of the layers
-\begin{itemize}
-\item web server misconfigurations and vulnerabilities (like certificate related, weak ciphers, heartbleed) 
-\item web application vulnerabilities
-\item unpatched or outdated web applications
-\end{itemize}
-
-
-software that is used in each layer
-\begin{itemize}
-\item developed internally
-\item used out of the box
-\end{itemize}
-examples of each
-if out of the box the vulnerabilities are usually discovered and reported in the public.
-internally developed ones need to be checked before open to outside
-
-
-
 
 \section{CERN Web Security}
 The vulnerabilities in web applications can reside from three main areas. A misconfiguration on the server side, such as using weak ciphers or expired certificates can leave a door open for attackers. secondly vulnerabilities can be a consequence of wrong development choices. Not considering security concerns during the design and development phase can result into an application that is a target for vulnerabilities like cross-site scripting (XSS). In some other cases, the web application is using a vulnerable third party software, e.g. an outdated Drupal instance, that needs to be updated or patched. CERN Computer Security team uses various tools and procedures to prevent exposure of vulnerable web applications to the world outside the organization. Also, it is important to detect any vulnerabilities in web applications as soon as possible and take necessary actions to secure the whole web infrastructure at CERN.
@@ -81,10 +66,18 @@ Whenever a new vulnerability is published, it is a part of the CERN Computer Sec
 \section{Relevant Tools}
 \label{sec:tools}
 There are various tools that are being used by CERN Computer Security team to ensure the security of CERN resources. In this section I am going to give a short description of the tools that are relevant to this project and are mentioned in the following chapters. 
-\subsection{Web application Scanner} 
+\subsection{Web Application Scanning} 
 Web Application Scanner (WAS) is a tool that can be used to generate a list of all web servers and websites at CERN, run skipfish\footnote{Google open source web application vulnerability scanner} web scanner on a URL and report warnings and vulnerabilities, or run Web Application Detection (WAD) tool to detect technologies used in a particular website or web server.
-\subsection{Web Application Detection}
-CERN Web landscape - both web servers and centrally-hosted websites - are regularly scanned with Web Application Detection (WAD) tool, in order to detect web applications and technologies being used, and possibly also their versions. This tool is developed using an open source project called "Wappalyzer"\footnote{\url{https://github.com/ElbertF/Wappalyzer}}. Wappalyzer is a cross-platform utility that uncovers the technologies, such as content management systems, eCommerce platforms, web servers,etc. used on websites.  Wappalyzer uses a set of predefined rules to detect technologies and these rules are stored in a JSON file. WAD uses this JSON file to detect technologies at CERN. Figure ... illustrates a detection rule used to detect Indico instances. It checks for a special cookie name or uses regular expressions to the find name Indico in the footers of the website. 
+\subsubsection{Web Application Detection}
+CERN Web landscape - both web servers and centrally-hosted websites - are regularly scanned with Web Application Detection (WAD) tool, in order to detect web applications and technologies being used, and possibly also their versions. This tool is developed using an open source project called "Wappalyzer"\footnote{\url{https://github.com/ElbertF/Wappalyzer}}. Wappalyzer is a cross-platform utility that uncovers the technologies, such as content management systems, eCommerce platforms, web servers,etc. used on websites.  Wappalyzer uses a set of predefined rules to detect technologies and these rules are stored in a JSON file. WAD uses this JSON file to detect technologies at CERN. Figure \ref{figure:indico} illustrates a detection rule used to detect Indico instances. It uses regular expressions to search for the phrase ``Powered by Indico'' on the web page. Alternatively it detects Indico instances by the name of the session variables a website uses. This detection rule was added to Wappalyzer and pushed upstream.
+\begin{figure}[h!]
+\label{figure:indico}
+  \centering
+    \includegraphics[width=1.0\textwidth]{indico}
+  \caption{Indico Detection Rule}
+  
+\end{figure}
+ 
 \subsubsection{WASDOM}
 
 \label{wad_section}
