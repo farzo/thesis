@@ -7,11 +7,11 @@
 \paragraph{}
 
 CERN Computer Security Team performs scans of various types of resources, such as devices, web servers, web sites, etc. It is impossible to scan these resources manually and there is a need for an Scanning Engine that would facilitate scheduling and running these scans, share the load across multiple scanning hosts in a fault-tolerant way, and combine results.
-GNU parallel is a command-line utility for Unix-like operating systems that allows us to execute jobs concurrently locally or using remote computers. A job is typically a single command or a small script that has to be run for each of the lines in the input.\footnote{\url{http://savannah.gnu.org/projects/parallel}} It will be a trivial task to provide GNU parallel with a list of CERN resources and have the scans run on these resources concurrently.
+``GNU Parallel" is a command-line utility for Unix-like operating systems that allows us to execute jobs concurrently locally or using remote computers. A job is typically a single command or a small script that has to be run for each of the lines in the input.\footnote{\url{http://savannah.gnu.org/projects/parallel}} It will be a trivial task to provide GNU Parallel with a list of CERN resources and have the scans run on these resources concurrently.
 \\ 
 On the other hand, As discussed in section \ref{sec:tools}, CERN has a collection of various scripts for detecting misconfigurations, such as expired certificates and basic HTTP authentication, or vulnerabilities, such as Heartbleed\footnote{Critical OpenSSL security bug disclosed in 2014}. 
 \\
-There is a need for a tool that fills the gap between detection scripts and GNU parallel, making it possible to enable the permanent and automatic scanning of the resources. This tool (the Scanner) will act like a wrapper around detection scripts, standardizing the input and output format of the scripts, so that they can be used with GNU parallel and their results can be analyzed automatically. The Scanner should also make it possible to run a subset of available detection scripts on targets. Another objective of the Scanner is to make it as simple and quick as possible to add a new detection script, and run it on all CERN resources to ensure an acceptable detection/response speed when new vulnerabilities emerge.
+There is a need for a tool that fills the gap between detection scripts and GNU Parallel, making it possible to enable the permanent and automatic scanning of the resources. This tool (the Scanner) will act like a wrapper around detection scripts, standardizing the input and output format of the scripts, so that they can be used with GNU Parallel and their results can be analyzed automatically. The Scanner should also make it possible to run a subset of available detection scripts on targets. Another objective of the Scanner is to make it as simple and quick as possible to add a new detection script, and run it on all CERN resources to ensure an acceptable detection/response speed when new vulnerabilities emerge.
 
 \subsection{Use Cases}
 There are two major use cases for the Scanner:
@@ -34,6 +34,14 @@ The Scanner will provide the plugin with the inputs when running it. Depending o
 \\
 Additionally, plugins can be called with the following arguments instead of the target resource:
 \texttt{-{}-info} - returns plugin details in JSON format (see Figure \ref{figure:plugin-info})  
+\begin{figure}[h!]
+
+  \centering
+    \includegraphics[width=1.0\textwidth]{plugin-info}
+  \caption{Plugin Information}
+\label{figure:plugin-info}
+  
+\end{figure}
 \subsubsection{Output}
 It is important that the plugins follow a convention in their output format, so that the Scanner can analyze the results and group them, if necessary. Figure \ref{figure:plugin-results} illustrates a sample plugin output. After scanning a given target, each plugin should return the following information in JSON format (mandatory fields in bold): 
 \begin{itemize}
@@ -68,19 +76,13 @@ It is important that the plugins follow a convention in their output format, so 
 \end{itemize}
 \end{itemize}
 
-\begin{figure}[h!]
-\label{figure:plugin-info}
-  \centering
-    \includegraphics[width=1.0\textwidth]{plugin-info}
-  \caption{Plugin Information}
-  
-\end{figure}
+
 
 \begin{figure}[h!]
-\label{figure:plugin-results}
   \centering
     \includegraphics[width=1.0\textwidth]{plugin-results}
   \caption{Plugin Output}
+  \label{figure:plugin-results}
   
 \end{figure}
 
