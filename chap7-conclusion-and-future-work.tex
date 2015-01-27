@@ -1,22 +1,22 @@
 \chapter{Conclusion and Future Work}
 \label{conclusion-and-future-work}
 \thispagestyle{empty}
-
-This project introduced two new tools for detection of vulnerable web applications. The approaches used in these tools are different from common web scanners, such as skipfish. In this project we focused more on detecting vulnerable applications as soon as possible by monitoring publicly available vulnerability information. Once we are aware of the vulnerability, we can take two approaches to detect vulnerable resources. If the vulnerability is specific to a software or product, VNT described in chapter \ref{vulnerability-notification-tool} detect resources that use those products and report them as probable vulnerable resources. In cases that the vulnerability is not specific to a product, or detecting that a resource is using that product is impossible
-
-
-
-possible improvements:
-
-in mapping algorithm use string distances
-
-looking at versions when finding resources
-
-vnt extensions like forgetting,etc. 
-
-scanner??
+\paragraph{}
+This project introduced two new tools for detection of vulnerable web applications. The approaches used in these tools are different from common web scanners, such as skipfish. In this project we focused more on detecting vulnerable applications as soon as possible by monitoring publicly available vulnerability information. Once we are aware of the vulnerability, we can take two approaches to detect vulnerable resources. If the vulnerability is specific to a software or product, VNT described in Chapter \ref{vulnerability-notification-tool} will report resources that use those products. In cases that the vulnerability is not specific to a product, or detecting that a resource is using that product is impossible or inefficient, we would need to write our own detection scripts and use the Scanner (as described in Chapter \ref{scanner}) to detect vulnerable resources.
+\subsection{Vulnerability Notification Tool}
+VNT can be used to get informed about all vulnerabilities, regardless of the product they affect or whether they are web-related. It can also be a part of the vulnerability management mechanism to help keeping track of vulnerabilities. It is possible to extend VNT and evolve into a vulnerability management framework, where user can decide to ignore some vulnerabilities or get notification based on the type of changes that happen in a vulnerability data.
+\paragraph{}
+The performance of VNT is highly dependent on the vulnerability source it is using. At the time of doing this project, we decided on using NVD,  but it is important to keep an eye on the market and use other sources instead of -or along with- NVD, if they fit our needs as described in Section \ref{vuln_sources}. 
+\paragraph{}
+One of the main challenges while using NVD was the randomness of CPE names. Although CPE is supposed to be a standard way of enumerating platforms, there are still many problems with it like the incompleteness of the dictionary, multiple entries for the same product, etc. On the other hand, vulnerability sources are each using their own standard for listingg vulnerable products and this makes it more difficult to use them together. There seems to be a need for a standard format that is complete and robust enough to be used by all sources. 
+\paragraph{}
+The product name matching algorithm that we are currently using to find vulnerable products can also be improved. The current algorithm as described in Section \ref{name_matching} ignores the category of WAD names. A possible improvement to the algorithm would be to report matches only if the CPE type (first field of the CPE name) and WAD category match (e.g. both are operating systems, etc.). Another improvement is to use available algorithms for computing the string distance between CPE and WAD names and reporting the pairs that have a similarity level higher than a threshold.  
+\paragraph{}
+The product version reported by WAD is not always reliable e.g. Apache servers might be reported to have obsolete versions while the new updated have been backported to them. In addition, WAD is unable to detect the version of many products. From NVD feeds, we normally receive the list of affected versions of a product, but this data changes quite often and in consequent updates of the feed, we notice that a vulnerable version is not reported as vulnerable or vice versa. Due to these limitations, we decided to ignore product versions when reporting vulnerable resources and leave to the investigator of the vulnerability to decide if a certain resource is indeed affected. Once we have more reliable version data both from WAD and NVD, the tool can be slightly changed to only report resources that use an affected version of the product.
 
 
++++++++++++
+scanner?? not limited to web
 +++++
 If there is new resource detected at CERN: we can check in our archive and see if the new resource is affected by old vulnerabilities -> less likely. but atleast check for the recent vulnerbailities. A part of the firewall opening? 
 another scope. not responding to new vulnerabilities but making sure a new resource is not vulnerable
