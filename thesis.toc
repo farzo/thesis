@@ -89,11 +89,15 @@
 \contentsline {chapter}{\numberline {4}Conclusion and Future Work}{43}{chapter.4}
 \contentsline {paragraph}{}{43}{section*.54}
 \contentsline {subsection}{\numberline {4.0.1}Vulnerability Notification Tool}{43}{subsection.4.0.1}
-\contentsline {paragraph}{}{43}{section*.55}
+\contentsline {paragraph}{}{44}{section*.55}
 \contentsline {paragraph}{}{44}{section*.56}
 \contentsline {paragraph}{}{44}{section*.57}
 \contentsline {paragraph}{}{44}{section*.58}
-\contentsline {chapter}{\numberline {A}Annexes}{45}{appendix.A}
-\contentsline {section}{\numberline {A.1}VNT Evaluation Method}{45}{section.A.1}
-\contentsline {subsection}{\numberline {A.1.1}Calculating the Number of Vulnerabilities}{45}{subsection.A.1.1}
-\contentsline {chapter}{Bibliographie}{45}{section*.58}
+\contentsline {paragraph}{}{45}{section*.59}
+\contentsline {paragraph}{}{45}{section*.60}
+\contentsline {subsection}{\numberline {4.0.2}Scanner}{45}{subsection.4.0.2}
+\contentsline {paragraph}{}{45}{section*.61}
+\contentsline {chapter}{\numberline {A}Annexes}{47}{appendix.A}
+\contentsline {section}{\numberline {A.1}VNT Evaluation Method}{47}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Calculating the Number of Vulnerabilities}{47}{subsection.A.1.1}
+\contentsline {chapter}{Bibliographie}{47}{section*.61}
