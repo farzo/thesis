@@ -1,44 +1,44 @@
-\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.1.1}{Vulnerability Definition}{chapter.1}% 2
-\BOOKMARK [1][-]{section.1.2}{CERN Web Landscape}{chapter.1}% 3
-\BOOKMARK [2][-]{subsection.1.2.1}{CERN Websites}{section.1.2}% 4
-\BOOKMARK [2][-]{subsection.1.2.2}{Non-central Web Servers}{section.1.2}% 5
-\BOOKMARK [1][-]{section.1.3}{CERN Web Security}{chapter.1}% 6
-\BOOKMARK [2][-]{subsection.1.3.1}{Prevention}{section.1.3}% 7
-\BOOKMARK [2][-]{subsection.1.3.2}{Detection}{section.1.3}% 8
-\BOOKMARK [1][-]{section.1.4}{Relevant Tools}{chapter.1}% 9
-\BOOKMARK [2][-]{subsection.1.4.1}{Web Application Scanning}{section.1.4}% 10
-\BOOKMARK [2][-]{subsection.1.4.2}{Detection Scripts}{section.1.4}% 11
-\BOOKMARK [1][-]{section.1.5}{Objectives}{chapter.1}% 12
-\BOOKMARK [0][-]{chapter.2}{Vulnerability Notification Tool}{}% 13
-\BOOKMARK [1][-]{section.2.1}{Motivation}{chapter.2}% 14
-\BOOKMARK [1][-]{section.2.2}{Source Evaluation}{chapter.2}% 15
-\BOOKMARK [2][-]{subsection.2.2.1}{Approach}{section.2.2}% 16
-\BOOKMARK [2][-]{subsection.2.2.2}{Vulnerability Sources}{section.2.2}% 17
-\BOOKMARK [2][-]{subsection.2.2.3}{Conclusion}{section.2.2}% 18
-\BOOKMARK [1][-]{section.2.3}{National Vulnerability Database}{chapter.2}% 19
-\BOOKMARK [2][-]{subsection.2.3.1}{Data Feeds}{section.2.3}% 20
-\BOOKMARK [2][-]{subsection.2.3.2}{Challenges}{section.2.3}% 21
-\BOOKMARK [1][-]{section.2.4}{Product Name Matching}{chapter.2}% 22
-\BOOKMARK [2][-]{subsection.2.4.1}{Approach}{section.2.4}% 23
-\BOOKMARK [2][-]{subsection.2.4.2}{Algorithm}{section.2.4}% 24
-\BOOKMARK [2][-]{subsection.2.4.3}{Evaluation}{section.2.4}% 25
-\BOOKMARK [1][-]{section.2.5}{Vulnerable Resources}{chapter.2}% 26
-\BOOKMARK [1][-]{section.2.6}{Output and Notifications}{chapter.2}% 27
-\BOOKMARK [1][-]{section.2.7}{Results}{chapter.2}% 28
-\BOOKMARK [0][-]{chapter.3}{Scanner}{}% 29
-\BOOKMARK [1][-]{section.3.1}{Motivation}{chapter.3}% 30
-\BOOKMARK [2][-]{subsection.3.1.1}{Use Cases}{section.3.1}% 31
-\BOOKMARK [1][-]{section.3.2}{Scanner Specifications}{chapter.3}% 32
-\BOOKMARK [2][-]{subsection.3.2.1}{Plugin Specifications}{section.3.2}% 33
-\BOOKMARK [2][-]{subsection.3.2.2}{Scanner Options}{section.3.2}% 34
-\BOOKMARK [2][-]{subsection.3.2.3}{Targets}{section.3.2}% 35
-\BOOKMARK [2][-]{subsection.3.2.4}{Output}{section.3.2}% 36
-\BOOKMARK [1][-]{section.3.3}{Conclusion}{chapter.3}% 37
-\BOOKMARK [0][-]{chapter.4}{Conclusion and Future Work}{}% 38
-\BOOKMARK [1][-]{subsection.4.0.1}{Vulnerability Notification Tool}{chapter.4}% 39
-\BOOKMARK [2][-]{subsection.4.0.2}{Scanner}{subsection.4.0.1}% 40
-\BOOKMARK [0][-]{subsection.4.0.2}{Bibliographie}{}% 41
-\BOOKMARK [0][-]{appendix.A}{Annexes}{}% 42
-\BOOKMARK [1][-]{section.A.1}{VNT Evaluation Method}{appendix.A}% 43
-\BOOKMARK [2][-]{subsection.A.1.1}{Calculating the Number of Vulnerabilities}{section.A.1}% 44
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}
+\BOOKMARK [1][-]{section.1.1}{Vulnerability Definition}{chapter.1}
+\BOOKMARK [1][-]{section.1.2}{CERN Web Landscape}{chapter.1}
+\BOOKMARK [2][-]{subsection.1.2.1}{CERN Websites}{section.1.2}
+\BOOKMARK [2][-]{subsection.1.2.2}{Non-central Web Servers}{section.1.2}
+\BOOKMARK [1][-]{section.1.3}{CERN Web Security}{chapter.1}
+\BOOKMARK [2][-]{subsection.1.3.1}{Prevention}{section.1.3}
+\BOOKMARK [2][-]{subsection.1.3.2}{Detection}{section.1.3}
+\BOOKMARK [1][-]{section.1.4}{Relevant Tools}{chapter.1}
+\BOOKMARK [2][-]{subsection.1.4.1}{Web Application Scanning}{section.1.4}
+\BOOKMARK [2][-]{subsection.1.4.2}{Detection Scripts}{section.1.4}
+\BOOKMARK [1][-]{section.1.5}{Objectives}{chapter.1}
+\BOOKMARK [0][-]{chapter.2}{Vulnerability Notification Tool}{}
+\BOOKMARK [1][-]{section.2.1}{Motivation}{chapter.2}
+\BOOKMARK [1][-]{section.2.2}{Source Evaluation}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.2.1}{Approach}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.2}{Vulnerability Sources}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.3}{Conclusion}{section.2.2}
+\BOOKMARK [1][-]{section.2.3}{National Vulnerability Database}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.3.1}{Data Feeds}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.2}{Challenges}{section.2.3}
+\BOOKMARK [1][-]{section.2.4}{Product Name Matching}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.4.1}{Approach}{section.2.4}
+\BOOKMARK [2][-]{subsection.2.4.2}{Algorithm}{section.2.4}
+\BOOKMARK [2][-]{subsection.2.4.3}{Evaluation}{section.2.4}
+\BOOKMARK [1][-]{section.2.5}{Vulnerable Resources}{chapter.2}
+\BOOKMARK [1][-]{section.2.6}{Output and Notifications}{chapter.2}
+\BOOKMARK [1][-]{section.2.7}{Results}{chapter.2}
+\BOOKMARK [0][-]{chapter.3}{Scanner}{}
+\BOOKMARK [1][-]{section.3.1}{Motivation}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.1.1}{Use Cases}{section.3.1}
+\BOOKMARK [1][-]{section.3.2}{Scanner Specifications}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.2.1}{Plugin Specifications}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.2}{Scanner Options}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.3}{Targets}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.4}{Output}{section.3.2}
+\BOOKMARK [1][-]{section.3.3}{Conclusion}{chapter.3}
+\BOOKMARK [0][-]{chapter.4}{Conclusion and Future Work}{}
+\BOOKMARK [1][-]{subsection.4.0.1}{Vulnerability Notification Tool}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.0.2}{Scanner}{subsection.4.0.1}
+\BOOKMARK [0][-]{subsection.4.0.2}{Bibliographie}{}
+\BOOKMARK [0][-]{appendix.A}{Annexes}{}
+\BOOKMARK [1][-]{section.A.1}{VNT Evaluation Method}{appendix.A}
+\BOOKMARK [2][-]{subsection.A.1.1}{Calculating the Number of Vulnerabilities}{section.A.1}
