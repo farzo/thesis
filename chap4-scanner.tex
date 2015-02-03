@@ -86,7 +86,6 @@ It is important that the plugins follow a convention in their output format, so 
 
 
 \subsection{Scanner Options}
-\paragraph{}
 The Scanner will be directly used by security team members; therefore, it is important to design a robust user interface for it. The user can use the following options to customize Scanner parameters:
 
 \begin{itemize}
@@ -95,7 +94,7 @@ The Scanner will be directly used by security team members; therefore, it is imp
 
     \texttt{-l|-{}-list TYPE} - list all plugins available in the plugin directory 
                        (for the given resource type(or all))
-\item    \texttt{-q|-{}-quiet} - be quiet
+\item    \texttt{-q|-{}-quiet} - be quiet (only output the scan result and no other information regarding the progress of the scan)
 \item    \texttt{    -v|-{}-verbose LEVEL} - be more verbose 
     	 				 (to the given verbosity level in the range of 1 to 5,
     	 				  with 5 being the most verbose)
@@ -104,7 +103,6 @@ The Scanner will be directly used by security team members; therefore, it is imp
 \item    \texttt{ -{}-plugin-list PLUGINS-FILE} - run plugins listed in the file (one line per plugin executable)
 \item    \texttt{  -{}-plugin-dir DIRECTORY} - look for plugins in this directory (default: /opt/scan/plugins)
 \item    \texttt{    -{}-log FILE} - log output (but not results) to a file instead on printing on standard output  
-
 \end{itemize}
 And the following options can be used to define the target resource:
 \begin{itemize}
@@ -122,10 +120,8 @@ And the following options can be used to define the target resource:
 
 
 \subsection{Targets}
-\paragraph{}
 A CERN resource can be composed of multiple targets. For example, a device can have multiple IP addresses, aliases, open ports or URLs and each combination of these fields can specify a scanning target. A plugin deals with only one target (a single IP, alias, port, etc.) and it is the job of the Scanner to loop over all combinations of IP addresses, aliases, ports and URLs when calling plugins .
 \subsubsection{Example}
-\paragraph{}
 Consider the following command:
 
 \begin{table}[H]
@@ -265,14 +261,13 @@ For many plugins (e.g. Heartbleed) the URLs are irrelevant, while for others (e.
     
 \end{table}
 \noindent
-If, incidentally or pressed by an emergency, we call the Scanner and provide ``too many" details for plugins which don't need them, things should still work. We just risk waiting for the results a bit longer, and getting duplicated results.
+If, incidentally or pressed by an emergency, we call the Scanner and provide ``too many" details for plugins that do not need them, things should still work. We just risk waiting for the results a bit longer, and getting duplicated results.
 \subsection{Output}
-\paragraph{}
-The Scanner prints exactly one line per target and vulnerability, semicolon-separated values:
+The Scanner prints exactly one line per target and vulnerability, in the form of semicolon-separated values:
 \begin{verbatim}
 resource_type;resource_name;plugin_name;result;notes;targets
 \end{verbatim}
-Targets from the same resource with the same scanning results (results and notes) will be grouped into one line. This gives the plugin designer the opportunity to decide on grouping. For example, if the plugin designer includes the port number in the notes, the targets with the same results but different port numbers will be reported in two different lines. This is useful, because the grouping very much depends on the nature of the test the plugin is running. For example, in the case of Heartbleed, the plugin designer would prefer to include the IP address and port number in the notes, but ignore the URLs. On the other hand, landing\_page plugin would report the complete target fields, including URLs, in the notes.
+Targets from the same resource with the same scanning results (results and notes) will be grouped into one line. This gives the plugin designer the opportunity to decide on grouping. For example, if the plugin designer includes the port number in the notes, the targets with the same results but different port numbers will be reported in two different lines. This is useful, because the grouping very much depends on the nature of the test the plugin is running. For example, in the case of Heartbleed, the plugin designer would prefer to include the IP address and port number in the notes, but ignore the URLs. On the other hand, the landing\_page plugin would report the complete target fields, including URLs, in the notes.
 \subsubsection{Examples}
 The following command checks if the device uses SSL3\footnote{SSL version 3 is vulnerable to the POODLE vulnerability discovered in October 2014}:
 \begin{table}[H]
@@ -300,7 +295,7 @@ The output of the scan is:
 \texttt{device;lcg-argus;detect\_ssl3;VULNERABLE;SSLv3 is enabled on lcg-argus:8443;[lcg-argus:8443]}
 \\
 \\
-As you can see, for each scan a different result line is printed, because the plugin reports the device name and port in the notes. 
+As one can see, for each scan a different result line is printed, because the plugin reports the device name and port in the notes. 
 This other example checks for a default landing page on a web server:
 \begin{table}[H]
 
@@ -327,7 +322,7 @@ device;pcitdi86;landing\_page;SECURE;The target does not use an empty or default
 }
 \\
 In this case, the scanning results of the two targets (with different aliases) are grouped into one line.
-If the Scanner faces a problem while running the plugin (plugin crash, output not parsable, etc) it will report a line with the result FAIL. Also, if the user defines a timeout (via -{}-timeout) and a timeout occurs while running the plugin, it will be reported in final results.
+If the Scanner faces a problem while running the plugin (plugin crash, output not parsable, etc) it will report a line with the result FAIL. Also, if the user defines a timeout (via -{}-timeout) and a timeout occurs while running the plugin, it will be reported in the final results.
 \\ 
 \texttt{device;pcitdi87;landing\_page;TIMEOUT;plugin timeout after 10 ms;[pcitdi86:80/index.html]}
 \\
@@ -352,7 +347,7 @@ If the Scanner faces a problem while running the plugin (plugin crash, output no
 
 \section{Conclusion}
 \paragraph{}
-The Scanner fills the gap between an Scanning Engine and individual security tests. It makes it easier to develop detection scripts that would test for a misconfiguration or a vulnerability on a single target. This can improve the procedure of scanning CERN resources, whenever a new vulnerability is discovered. Using the Scanner we can develop short detection scripts that deal with only one target and use the Scanner to take care of looping over different targets on the same resource. In one level higher, we would like to scan multiple resources at CERN (maybe the whole CERN infrastructure) to find vulnerable resources, in a concurrent and fault tolerant manner. GNU Parallel as described in section \ref{scanner_motivation} can feed the resource data (from prepared files, obtained by running \texttt{was list-servers} and \texttt{was list-sites}) to the Scanner and have it scan multiple resources concurrently.
+The Scanner fills the gap between a scanning engine and individual security tests. It makes it easier to develop detection scripts that would test for a misconfiguration or a vulnerability on a single target. This can improve the procedure of scanning CERN resources, whenever a new vulnerability is discovered. Using the Scanner we can develop short detection scripts that deal with only one target and use the Scanner to take care of looping over different targets on the same resource. One level higher, we would like to scan multiple resources at CERN (maybe the whole CERN infrastructure) to find vulnerable resources, in a concurrent and fault tolerant manner. GNU Parallel as described in section \ref{scanner_motivation} can feed the resource data (from prepared files, obtained by running \texttt{was list-servers} and \texttt{was list-sites}) to the Scanner and have it scan multiple resources concurrently.
 \\
-In addition, the Scanner will group the findings of individual tests to remove duplicate results and generate a parsable output that can be used for further investigations. For example. the Scanner output can be inserted into CERN System Security DataBase (SSDB), used to keep track of vulnerabilities. Integration to SSDB is not implemented, yet, because the team is planning to replace SSDB with an alternative solution. 
+In addition, the Scanner will group the findings of individual tests to remove duplicate results and generate a parsable output that can be used for further investigations. For example. the Scanner output can be inserted into the CERN System Security DataBase (SSDB), used to keep track of vulnerabilities. Integration to SSDB is not implemented, yet, because SSDB will soon be replaced by an improved solution. 
 
