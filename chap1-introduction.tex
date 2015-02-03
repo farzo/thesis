@@ -7,7 +7,7 @@ Another reason for the increasing popularity of web applications is the simplici
 \paragraph{}
 Even if a web application is designed to be as secure as possible, vulnerabilities will invariably be discovered over time in its code or in the code of underlying packages it uses and relies on. Therefore, to continue ensuring that the application remains secure, it is important to constantly check for newly discovered vulnerabilities and make sure that the application is not affected. This task is easier for the application designers themselves, who are aware of all the technologies that are used in their application; however, in many organizations like CERN, any employee can set up a web server or launch a website and few employees bother to monitor their own web applications for security vulnerabilities. It is the job of the Computer Security Team to scan these various web servers and websites and detect all vulnerabilities remotely.
 \paragraph{}
-There are two main approaches for ensuring the security of web applications. The first approach is to use the available automatic scanning tools, such as Acunetix or Skipfish\footnote{Google open source security reconnaissance tool}, to detect vulnerabilities. Using this approach, we can find common vulnerabilities, but when a new vulnerability emerges we have to wait for the new version of the scanning tool to be released and include tests for the new vulnerability. Also, due to the complexity of these tools, it is a time consuming task to configure them for a specific scanning purpose. 
+There are two main approaches for ensuring the security of web applications: The first approach is to use the available automatic scanning tools, such as Acunetix or Skipfish\footnote{Google open source security reconnaissance tool}, to detect vulnerabilities. Using this approach, we can find common vulnerabilities, but when a new vulnerability emerges we have to wait for the new version of the scanning tool to be released and include tests for the new vulnerability. Also, due to the complexity of these tools, it is a time consuming task to configure them for a specific scanning purpose. 
 \paragraph{}
 The second approach is to keep an eye on vulnerability sources, databases, security mailing lists, etc. to get informed about new vulnerabilities as soon as possible. This way we will not miss any critical vulnerabilities. The next step is to use the vulnerability information to detect any vulnerable resources in the organization. 
 \section{Project Focus}
@@ -19,15 +19,15 @@ On the other hand, sometimes the vulnerabilities are not specific to a certain p
 
 \section{Vulnerability Definition}
 \paragraph{}
-According to MITRE CVE initiative\footnote{\url{http://cve.mitre.org/about/terminology.html\#Dist}}, a vulnerability is a mistake in software that can be directly used by a hacker to gain access to a system or network. A vulnerability would allow an attacker to:
+According to the MITRE CVE initiative\footnote{\url{http://cve.mitre.org/about/terminology.html\#Dist}}, a vulnerability is a mistake in software that can be directly used by a hacker to gain access to a system or network. A vulnerability would allow an attacker to:
 \begin{itemize}
-\item execute commands as another user
+\item execute unauthorized commands
 \item access data that is contrary to the specified access restrictions for that data
-\item pose as another entity
+\item pose as another entity or user
 \item conduct a denial of service
 \end{itemize}
 
-Note that a vulnerability can be a result of a mistake in configuring a product. For example, not changing the default password will open a door to attackers. 
+Note that a vulnerability can be a result of a mistake in design or in configuration of a product. For example, not changing the default password is a configuration rather than a design vulnerability that will open a door to attackers. 
 
 \section{CERN Web Landscape}
 \paragraph{}
@@ -44,7 +44,7 @@ There are more than 13K websites at CERN that are centrally hosted by web-servic
 \item \textbf{Drupal}: This type provides a Content Management System to publish, edit and organize content through a common web interface.
 \item \textbf{Java MiddleWare On Demand site}:This is the type of site if the user needs a Java solution for deploying servlets or JSP web applications.
 \end{itemize}
-The servers hosting these websites, are monitored by web-services team to stay secure. For example, if a vulnerability in Drupal is discovered the Drupal team will make sure that all Drupal websites are patched immediately. However, each website owner can customize or configure his website to use technologies that might threaten its security. It is the job of the Computer Security team to scan individual websites and look for vulnerabilities. 
+The servers hosting these websites, are monitored by web-services team to stay secure. For example, if a vulnerability in Drupal is discovered the Drupal team will make sure that all Drupal websites are patched immediately. However, each website owner can customize or configure his website to use technologies that might threaten its security. It is the job of the Computer Security Team to scan individual websites and look for vulnerabilities. 
 \subsection{Non-central Web Servers}
 \paragraph{}
 CERN landscape is not limited to the central web servers and websites hosted centrally through Web-services. There are more than 1k instances of dedicated web servers at CERN in the format of \url{http://X.cern.ch} where X is the server name. Indico\footnote{CERN tool for managing conferences, workshops and meetings} at \url{http://indico.cern.ch/} is an example of a dedicated web server. Most of the websites hosted on Non-central web servers are only visible inside CERN. Others have firewall openings and are accessible from the Internet.

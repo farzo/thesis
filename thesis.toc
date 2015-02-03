@@ -1,99 +1,103 @@
 \contentsline {chapter}{\numberline {1}Introduction}{7}{chapter.1}
 \contentsline {paragraph}{}{7}{section*.4}
 \contentsline {paragraph}{}{8}{section*.5}
-\contentsline {section}{\numberline {1.1}Vulnerability Definition}{8}{section.1.1}
 \contentsline {paragraph}{}{8}{section*.6}
-\contentsline {section}{\numberline {1.2}CERN Web Landscape}{9}{section.1.2}
-\contentsline {paragraph}{}{9}{section*.7}
-\contentsline {subsection}{\numberline {1.2.1}CERN Websites}{9}{subsection.1.2.1}
+\contentsline {section}{\numberline {1.1}Project Focus}{8}{section.1.1}
+\contentsline {paragraph}{}{8}{section*.7}
 \contentsline {paragraph}{}{9}{section*.8}
-\contentsline {subsection}{\numberline {1.2.2}Non-central Web Servers}{10}{subsection.1.2.2}
-\contentsline {paragraph}{}{10}{section*.9}
-\contentsline {section}{\numberline {1.3}CERN Web Security}{10}{section.1.3}
-\contentsline {paragraph}{}{10}{section*.10}
-\contentsline {subsection}{\numberline {1.3.1}Prevention}{11}{subsection.1.3.1}
-\contentsline {paragraph}{}{11}{section*.11}
-\contentsline {subsection}{\numberline {1.3.2}Detection}{11}{subsection.1.3.2}
+\contentsline {section}{\numberline {1.2}Vulnerability Definition}{9}{section.1.2}
+\contentsline {paragraph}{}{9}{section*.9}
+\contentsline {section}{\numberline {1.3}CERN Web Landscape}{9}{section.1.3}
+\contentsline {paragraph}{}{9}{section*.10}
+\contentsline {subsection}{\numberline {1.3.1}CERN Websites}{10}{subsection.1.3.1}
+\contentsline {paragraph}{}{10}{section*.11}
+\contentsline {subsection}{\numberline {1.3.2}Non-central Web Servers}{11}{subsection.1.3.2}
 \contentsline {paragraph}{}{11}{section*.12}
-\contentsline {section}{\numberline {1.4}Relevant Tools}{11}{section.1.4}
+\contentsline {section}{\numberline {1.4}CERN Web Security}{11}{section.1.4}
 \contentsline {paragraph}{}{11}{section*.13}
-\contentsline {subsection}{\numberline {1.4.1}Web Application Scanning}{11}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.1}Prevention}{11}{subsection.1.4.1}
 \contentsline {paragraph}{}{11}{section*.14}
-\contentsline {subsubsection}{Web Application Detection}{12}{section*.15}
+\contentsline {subsection}{\numberline {1.4.2}Detection}{12}{subsection.1.4.2}
+\contentsline {paragraph}{}{12}{section*.15}
+\contentsline {section}{\numberline {1.5}Relevant Tools}{12}{section.1.5}
 \contentsline {paragraph}{}{12}{section*.16}
-\contentsline {subsection}{\numberline {1.4.2}Detection Scripts}{12}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.5.1}Web Application Scanning}{12}{subsection.1.5.1}
 \contentsline {paragraph}{}{12}{section*.17}
-\contentsline {section}{\numberline {1.5}Objectives}{13}{section.1.5}
-\contentsline {paragraph}{}{13}{section*.18}
+\contentsline {subsubsection}{Web Application Detection}{12}{section*.18}
+\contentsline {paragraph}{}{12}{section*.19}
+\contentsline {subsection}{\numberline {1.5.2}Detection Scripts}{13}{subsection.1.5.2}
+\contentsline {paragraph}{}{13}{section*.20}
+\contentsline {section}{\numberline {1.6}Objectives}{14}{section.1.6}
+\contentsline {paragraph}{}{14}{section*.21}
 \contentsline {chapter}{\numberline {2}Vulnerability Notification Tool}{15}{chapter.2}
 \contentsline {section}{\numberline {2.1}Motivation}{15}{section.2.1}
-\contentsline {paragraph}{}{15}{section*.19}
+\contentsline {paragraph}{}{15}{section*.22}
 \contentsline {section}{\numberline {2.2}Source Evaluation}{16}{section.2.2}
-\contentsline {paragraph}{}{16}{section*.20}
+\contentsline {paragraph}{}{16}{section*.23}
 \contentsline {subsection}{\numberline {2.2.1}Approach}{16}{subsection.2.2.1}
-\contentsline {paragraph}{}{16}{section*.21}
+\contentsline {paragraph}{}{16}{section*.24}
 \contentsline {subsection}{\numberline {2.2.2}Vulnerability Sources}{17}{subsection.2.2.2}
-\contentsline {paragraph}{}{17}{section*.22}
+\contentsline {paragraph}{}{17}{section*.25}
 \contentsline {subsection}{\numberline {2.2.3}Conclusion}{19}{subsection.2.2.3}
 \contentsline {section}{\numberline {2.3}National Vulnerability Database}{20}{section.2.3}
-\contentsline {paragraph}{}{20}{section*.23}
+\contentsline {paragraph}{}{20}{section*.26}
 \contentsline {subsection}{\numberline {2.3.1}Data Feeds}{20}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Challenges}{21}{subsection.2.3.2}
-\contentsline {subsubsection}{Downloading}{21}{section*.24}
-\contentsline {subsubsection}{Modification Date}{21}{section*.25}
-\contentsline {subsubsection}{Vulnerable Configuration}{22}{section*.26}
+\contentsline {subsubsection}{Downloading}{21}{section*.27}
+\contentsline {subsubsection}{Modification Date}{21}{section*.28}
+\contentsline {subsubsection}{Vulnerable Configuration}{22}{section*.29}
 \contentsline {section}{\numberline {2.4}Product Name Matching}{22}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Approach}{23}{subsection.2.4.1}
-\contentsline {subsubsection}{Common Platform Enumerations}{23}{section*.27}
-\contentsline {subsubsection}{WAD Product Names}{24}{section*.28}
-\contentsline {subsubsection}{Challenges}{24}{section*.29}
+\contentsline {subsubsection}{Common Platform Enumerations}{23}{section*.30}
+\contentsline {subsubsection}{WAD Product Names}{24}{section*.31}
+\contentsline {subsubsection}{Challenges}{24}{section*.32}
 \contentsline {subsection}{\numberline {2.4.2}Algorithm}{25}{subsection.2.4.2}
 \contentsline {subsection}{\numberline {2.4.3}Evaluation}{27}{subsection.2.4.3}
-\contentsline {subsubsection}{False Positives}{27}{section*.30}
-\contentsline {subsubsection}{False Negatives}{27}{section*.31}
+\contentsline {subsubsection}{False Positives}{27}{section*.33}
+\contentsline {subsubsection}{False Negatives}{27}{section*.34}
 \contentsline {section}{\numberline {2.5}Vulnerable Resources}{27}{section.2.5}
-\contentsline {paragraph}{}{27}{section*.32}
+\contentsline {paragraph}{}{27}{section*.35}
 \contentsline {section}{\numberline {2.6}Output and Notifications}{28}{section.2.6}
-\contentsline {paragraph}{}{28}{section*.33}
+\contentsline {paragraph}{}{28}{section*.36}
 \contentsline {section}{\numberline {2.7}Results}{28}{section.2.7}
-\contentsline {paragraph}{}{28}{section*.34}
-\contentsline {paragraph}{}{28}{section*.35}
-\contentsline {paragraph}{}{29}{section*.36}
+\contentsline {paragraph}{}{28}{section*.37}
+\contentsline {paragraph}{}{28}{section*.38}
+\contentsline {paragraph}{}{29}{section*.39}
 \contentsline {chapter}{\numberline {3}Scanner}{35}{chapter.3}
 \contentsline {section}{\numberline {3.1}Motivation}{35}{section.3.1}
-\contentsline {paragraph}{}{35}{section*.37}
+\contentsline {paragraph}{}{35}{section*.40}
 \contentsline {subsection}{\numberline {3.1.1}Use Cases}{36}{subsection.3.1.1}
-\contentsline {paragraph}{}{36}{section*.38}
+\contentsline {paragraph}{}{36}{section*.41}
 \contentsline {section}{\numberline {3.2}Scanner Specifications}{36}{section.3.2}
-\contentsline {paragraph}{}{36}{section*.39}
-\contentsline {subsection}{\numberline {3.2.1}Plugin Specifications}{36}{subsection.3.2.1}
-\contentsline {paragraph}{}{36}{section*.40}
-\contentsline {subsubsection}{Resource Types}{36}{section*.41}
 \contentsline {paragraph}{}{36}{section*.42}
-\contentsline {subsubsection}{Input}{37}{section*.43}
-\contentsline {paragraph}{}{37}{section*.44}
-\contentsline {subsubsection}{Output}{37}{section*.45}
-\contentsline {paragraph}{}{37}{section*.46}
+\contentsline {subsection}{\numberline {3.2.1}Plugin Specifications}{36}{subsection.3.2.1}
+\contentsline {paragraph}{}{36}{section*.43}
+\contentsline {subsubsection}{Resource Types}{36}{section*.44}
+\contentsline {paragraph}{}{36}{section*.45}
+\contentsline {subsubsection}{Input}{37}{section*.46}
+\contentsline {paragraph}{}{37}{section*.47}
+\contentsline {subsubsection}{Output}{37}{section*.48}
+\contentsline {paragraph}{}{37}{section*.49}
 \contentsline {subsection}{\numberline {3.2.2}Scanner Options}{38}{subsection.3.2.2}
-\contentsline {paragraph}{}{38}{section*.47}
+\contentsline {paragraph}{}{38}{section*.50}
 \contentsline {subsection}{\numberline {3.2.3}Targets}{40}{subsection.3.2.3}
-\contentsline {paragraph}{}{40}{section*.48}
-\contentsline {subsubsection}{Example}{40}{section*.49}
-\contentsline {paragraph}{}{40}{section*.50}
+\contentsline {paragraph}{}{40}{section*.51}
+\contentsline {subsubsection}{Example}{40}{section*.52}
+\contentsline {paragraph}{}{40}{section*.53}
 \contentsline {subsection}{\numberline {3.2.4}Output}{42}{subsection.3.2.4}
-\contentsline {paragraph}{}{42}{section*.51}
-\contentsline {subsubsection}{Examples}{42}{section*.52}
+\contentsline {paragraph}{}{42}{section*.54}
+\contentsline {subsubsection}{Examples}{42}{section*.55}
 \contentsline {section}{\numberline {3.3}Conclusion}{44}{section.3.3}
-\contentsline {paragraph}{}{44}{section*.53}
+\contentsline {paragraph}{}{44}{section*.56}
 \contentsline {chapter}{\numberline {4}Conclusion and Future Work}{45}{chapter.4}
 \contentsline {subsection}{\numberline {4.0.1}Vulnerability Notification Tool}{45}{subsection.4.0.1}
-\contentsline {paragraph}{}{46}{section*.54}
-\contentsline {paragraph}{}{46}{section*.55}
-\contentsline {paragraph}{}{46}{section*.56}
 \contentsline {paragraph}{}{46}{section*.57}
-\contentsline {paragraph}{}{47}{section*.58}
-\contentsline {paragraph}{}{47}{section*.59}
-\contentsline {paragraph}{}{47}{section*.60}
+\contentsline {paragraph}{}{46}{section*.58}
+\contentsline {paragraph}{}{46}{section*.59}
+\contentsline {paragraph}{}{46}{section*.60}
+\contentsline {paragraph}{}{47}{section*.61}
+\contentsline {paragraph}{}{47}{section*.62}
+\contentsline {paragraph}{}{47}{section*.63}
 \contentsline {subsection}{\numberline {4.0.2}Scanner}{47}{subsection.4.0.2}
 \contentsline {chapter}{Bibliography}{49}{subsection.4.0.2}
 \contentsline {chapter}{\numberline {A}Appendices}{51}{appendix.A}
