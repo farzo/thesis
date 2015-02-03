@@ -62,25 +62,21 @@
 \contentsline {subsubsection}{Input}{37}{section*.31}
 \contentsline {subsubsection}{Output}{37}{section*.32}
 \contentsline {subsection}{\numberline {3.2.2}Scanner Options}{38}{subsection.3.2.2}
-\contentsline {paragraph}{}{38}{section*.33}
 \contentsline {subsection}{\numberline {3.2.3}Targets}{40}{subsection.3.2.3}
-\contentsline {paragraph}{}{40}{section*.34}
-\contentsline {subsubsection}{Example}{40}{section*.35}
-\contentsline {paragraph}{}{40}{section*.36}
+\contentsline {subsubsection}{Example}{40}{section*.33}
 \contentsline {subsection}{\numberline {3.2.4}Output}{42}{subsection.3.2.4}
-\contentsline {paragraph}{}{42}{section*.37}
-\contentsline {subsubsection}{Examples}{42}{section*.38}
+\contentsline {subsubsection}{Examples}{42}{section*.34}
 \contentsline {section}{\numberline {3.3}Conclusion}{44}{section.3.3}
-\contentsline {paragraph}{}{44}{section*.39}
+\contentsline {paragraph}{}{44}{section*.35}
 \contentsline {chapter}{\numberline {4}Conclusion and Future Work}{45}{chapter.4}
 \contentsline {subsection}{\numberline {4.0.1}Vulnerability Notification Tool}{45}{subsection.4.0.1}
-\contentsline {paragraph}{}{46}{section*.40}
-\contentsline {paragraph}{}{46}{section*.41}
-\contentsline {paragraph}{}{46}{section*.42}
-\contentsline {paragraph}{}{46}{section*.43}
-\contentsline {paragraph}{}{47}{section*.44}
-\contentsline {paragraph}{}{47}{section*.45}
-\contentsline {paragraph}{}{47}{section*.46}
+\contentsline {paragraph}{}{46}{section*.36}
+\contentsline {paragraph}{}{46}{section*.37}
+\contentsline {paragraph}{}{46}{section*.38}
+\contentsline {paragraph}{}{46}{section*.39}
+\contentsline {paragraph}{}{47}{section*.40}
+\contentsline {paragraph}{}{47}{section*.41}
+\contentsline {paragraph}{}{47}{section*.42}
 \contentsline {subsection}{\numberline {4.0.2}Scanner}{47}{subsection.4.0.2}
 \contentsline {chapter}{Bibliography}{49}{subsection.4.0.2}
 \contentsline {chapter}{\numberline {A}Appendices}{51}{appendix.A}

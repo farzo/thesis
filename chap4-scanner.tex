@@ -44,18 +44,19 @@ It is important that the plugins follow a convention in their output format, so 
 \begin{itemize}
 
 
-   \item \textbf{result} (mandatory)- severity of the findings; one of these values (any other value in the result will be accepted by the Scanner, but a warning will be logged.):
+   \item \textbf{result} (mandatory): severity of the findings; one of these values (any other value in the result will be accepted by the Scanner, but a warning will be logged):
     \begin{itemize}
     
 
-        \item \textit{SECURE} - there is no security problem
+        \item \textit{SECURE} - no security problem was found
         \item  \textit{VULNERABLE} - security problem detected
         \item  \textit{WARNING} - there is something sub-optimal (e.g. a certificate expiring soon) but not a real security problem, yet
+        \item  \textit{TIMEOUT} - results not available, test timed out (the plugins do not have to detect timeouts as this can be done in the Scanner level) 
         \item  \textit{UNKNOWN} - results not available, test couldn't conclude (e.g. host unreachable)
-        \item  \textit{TIMEOUT} - results not available, test timed out. (The plugins do not have to detect timeouts as this can be done in the Scanner level) 
+      
             \end{itemize}
-\item      \textbf{notes} (mandatory) - human-readable details of the scan result (e.g. which weak ciphers were detected, which URLs are affected)
-\item      target (recommended) - what was scanned: If the target information is provided by the plugin it can be used to show more precise results, for example if a default port has been used, etc. The plugin can choose to report all or a subset of following:
+\item      \textbf{notes} (mandatory): human-readable details of the scan result (e.g. which weak ciphers were detected, which URLs are affected)
+\item      target (recommended): what was scanned: If the target information is provided by the plugin it can be used to show more precise results, for example if a default port has been used, etc. The plugin can choose to report all or a subset of following:
 \begin{itemize}
 
 
@@ -86,7 +87,7 @@ It is important that the plugins follow a convention in their output format, so 
 
 
 \subsection{Scanner Options}
-The Scanner will be directly used by security team members; therefore, it is important to design a robust user interface for it. The user can use the following options to customize Scanner parameters:
+The Scanner will be directly used by CERN Security Team members; therefore, it is important to design a robust user interface for it. The user can use the following options to customize Scanner parameters:
 
 \begin{itemize}
 
@@ -101,7 +102,7 @@ The Scanner will be directly used by security team members; therefore, it is imp
 \item    \texttt{    -t|-{}-timeout SECONDS} - set timeout per plugin (same for all plugins)
 \item    \texttt{    --plugin PLUGIN1.sh,PLUGIN2.py,PLUGIN3} - run selected plugins
 \item    \texttt{ -{}-plugin-list PLUGINS-FILE} - run plugins listed in the file (one line per plugin executable)
-\item    \texttt{  -{}-plugin-dir DIRECTORY} - look for plugins in this directory (default: /opt/scan/plugins)
+\item    \texttt{  -{}-plugin-dir DIRECTORY} - look for plugins in this directory %TODO: check with Sebastian (default: /opt/scan/plugins)
 \item    \texttt{    -{}-log FILE} - log output (but not results) to a file instead on printing on standard output  
 \end{itemize}
 And the following options can be used to define the target resource:
@@ -347,7 +348,7 @@ If the Scanner faces a problem while running the plugin (plugin crash, output no
 
 \section{Conclusion}
 \paragraph{}
-The Scanner fills the gap between a scanning engine and individual security tests. It makes it easier to develop detection scripts that would test for a misconfiguration or a vulnerability on a single target. This can improve the procedure of scanning CERN resources, whenever a new vulnerability is discovered. Using the Scanner we can develop short detection scripts that deal with only one target and use the Scanner to take care of looping over different targets on the same resource. One level higher, we would like to scan multiple resources at CERN (maybe the whole CERN infrastructure) to find vulnerable resources, in a concurrent and fault tolerant manner. GNU Parallel as described in section \ref{scanner_motivation} can feed the resource data (from prepared files, obtained by running \texttt{was list-servers} and \texttt{was list-sites}) to the Scanner and have it scan multiple resources concurrently.
+The Scanner fills the gap between a scanning engine and individual security tests. It makes it easier to develop detection scripts that would test for a misconfiguration or a vulnerability on a single target. This can improve the procedure of scanning CERN resources, whenever a new vulnerability is discovered. Using the Scanner we can develop short detection scripts that deal with only one target and use the Scanner to take care of looping over different targets on the same resource. One level higher, we would like to scan multiple resources at CERN (maybe the whole CERN infrastructure) to find vulnerable resources, in a concurrent and fault tolerant manner. GNU Parallel as described in Section \ref{scanner_motivation} can feed the resource data (from prepared files, obtained by running \texttt{was list-servers} and \texttt{was list-sites}) to the Scanner and have it scan multiple resources concurrently.
 \\
-In addition, the Scanner will group the findings of individual tests to remove duplicate results and generate a parsable output that can be used for further investigations. For example. the Scanner output can be inserted into the CERN System Security DataBase (SSDB), used to keep track of vulnerabilities. Integration to SSDB is not implemented, yet, because SSDB will soon be replaced by an improved solution. 
+In addition, the Scanner will group the findings of individual tests to remove duplicate results and generate a parsable output that can be used for further investigations. For example, the Scanner output can be inserted into the CERN System Security DataBase (SSDB), used to keep track of vulnerabilities. Integration to SSDB is not implemented, yet, because SSDB will soon be replaced by an improved solution. 
 
