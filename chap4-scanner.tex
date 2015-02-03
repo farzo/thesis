@@ -25,10 +25,8 @@ The Scanner runs a set of security tests (called plugins) on a single resource, 
 A plugin is a single security test for a given type of resource. After scanning a target, it says if a security problem was found or not (It can output more details when relevant). 
 %delam gerefte ey doost, havaye gerye ba man...havaye gerye ba man...
 \subsubsection{Resource Types}
-\paragraph{}
 There are various types of resources at CERN. In most cases the plugins need to scan websites or web servers (or other devices), but our implementation of the Scanner is independent of the type of the resource that is being scanned. If a plugin scans more than one resource type, depending on the type of the resource, it will require different inputs and consequently it needs to be executed differently. The Scanner, on the other hand, is the tool that executes the plugins, therefore, it needs to be configured to execute the same plugin in different ways depending on the resource type. To avoid complexity, a given plugin should deal with only one type of resource. Occasionally, the same test will need to be developed for different types of resources (e.g. the default landing page test is needed for both web sites and web server). In that case, the logic of the test should be shared, but still separate scripts should be developed for each resource type. For example, imagine that the script \texttt{landing\_page.py} contains the logic for testing for a default landing page on websites and web servers. A possible implementation is to develop one script for websites \texttt{landing\_page\_site.sh} that runs `\texttt{./landing\_page.py -site \$1}' and one script for web servers \texttt{landing\_page\_server.sh} that runs `\texttt{./landing\_page.py -server \$1}' 
 \subsubsection{Input}
-\paragraph{}
 The Scanner provides the plugin with inputs it should process. Depending on the nature of the security test a plugin is performing, it needs different input data. It is important that all plugins follow a convention about the way they receive inputs, so that the Scanner can run all the plugins in the same way. The plugin can assume that it is going to receive the input in the following order: \{\texttt{IP/HostName PORT ALIAS URL}\} for web servers/devices and \{\texttt{URL}\} for websites. The plugin can decide to ignore any of these input arguments, if irrelevant. Also, the Scanner might pass an empty string if the user does not specify a field.
 \\
 Additionally, plugins can be called with the following arguments instead of the target resource:
@@ -42,12 +40,11 @@ Additionally, plugins can be called with the following arguments instead of the 
   
 \end{figure}
 \subsubsection{Output}
-\paragraph{}
 It is important that the plugins follow a convention in their output format, so that the Scanner can analyze the results and group them, if necessary. Figure \ref{figure:plugin-results} illustrates a sample plugin output. After scanning a given target, each plugin should return the following information in JSON format (mandatory fields in bold): 
 \begin{itemize}
 
 
-   \item \textbf{result} (mandatory)- severity of the findings; one of these values (Any other value in the result will be accepted by the Scanner, but a warning will be logged.):
+   \item \textbf{result} (mandatory)- severity of the findings; one of these values (any other value in the result will be accepted by the Scanner, but a warning will be logged.):
     \begin{itemize}
     
 
@@ -58,7 +55,7 @@ It is important that the plugins follow a convention in their output format, so 
         \item  \textit{TIMEOUT} - results not available, test timed out. (The plugins do not have to detect timeouts as this can be done in the Scanner level) 
             \end{itemize}
 \item      \textbf{notes} (mandatory) - human-readable details of the scan result (e.g. which weak ciphers were detected, which URLs are affected)
-\item      target (recommended) - what was scanned: If the target information is provided by plugin it will be used to show more precise results, for example if a default port has been used, etc. The plugin can choose to report all or a subset of following:
+\item      target (recommended) - what was scanned: If the target information is provided by the plugin it can be used to show more precise results, for example if a default port has been used, etc. The plugin can choose to report all or a subset of following:
 \begin{itemize}
 
 
@@ -98,8 +95,6 @@ The Scanner will be directly used by security team members; therefore, it is imp
 
     \texttt{-l|-{}-list TYPE} - list all plugins available in the plugin directory 
                        (for the given resource type(or all))
-\item                  
-    \texttt{-n|-{}-no-action} - don't scan    			     (list what will be scanned with which plugins)
 \item    \texttt{-q|-{}-quiet} - be quiet
 \item    \texttt{    -v|-{}-verbose LEVEL} - be more verbose 
     	 				 (to the given verbosity level in the range of 1 to 5,
