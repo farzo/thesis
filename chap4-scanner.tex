@@ -9,8 +9,22 @@ The CERN Computer Security Team performs scans of various types of resources, su
 \\ 
 On the other hand, as discussed in Section \ref{sec:tools}, CERN has a collection of scripts for detecting misconfigurations, such as expired certificates and basic HTTP authentication, or vulnerabilities, such as Heartbleed\footnote{Critical OpenSSL security bug disclosed in 2014}. 
 \\
-There is a need for a tool that fills the gap between detection scripts and GNU Parallel to enable the continuous and automatic scanning of resources. This tool (the Scanner) is meant to act like as a wrapper around detection scripts, standardizing the input and output format of the scripts, so that parallel runs of it can be triggered by GNU Parallel and their results can be analyzed automatically. The Scanner should also make it possible to run a subset of available detection scripts on targets. Another objective of the Scanner is to make it as simple and fast as possible to add a new detection script, and run it on all CERN resources to ensure an acceptable detection/response speed when new vulnerabilities emerge.
+There is a need for a tool that fills the gap between detection scripts and GNU Parallel to enable the continuous and automatic scanning of resources. This tool (the Scanner) is meant to act like as a wrapper around detection scripts, standardizing the input and output format of the scripts, so that parallel runs of it can be triggered by GNU Parallel and their results can be analyzed automatically. The Scanner should also make it possible to run a subset of available detection scripts on targets. Another objective of the Scanner is to make it as simple and fast as possible to add a new detection script, and run it on all CERN resources to ensure an acceptable detection/response speed when new vulnerabilities emerge. Figure \ref{figure:scanner-arch} illustrates the relation between
+\begin{figure}[H]
 
+  \centering
+    \includegraphics[width=1.0\textwidth]{scanner-architecture}
+  \caption{Scanning Engine Architecture}
+\label{figure:scanner-arch}
+  
+\end{figure}
+
+the detection scripts, the Scanner and GNU Parallel. 
+
+
+
+
+%TODO: include the diagram here
 \subsection{Use Cases}
 There are two major use cases for the Scanner:
 \begin{itemize}
