@@ -82,7 +82,7 @@
 \contentsline {paragraph}{}{49}{section*.45}
 \contentsline {paragraph}{}{49}{section*.46}
 \contentsline {subsection}{\numberline {4.0.2}Scanner}{49}{subsection.4.0.2}
+\contentsline {chapter}{\numberline {A}Appendices}{51}{appendix.A}
+\contentsline {section}{\numberline {A.1}VNT Evaluation Method}{51}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Calculating the Number of Vulnerabilities}{51}{subsection.A.1.1}
 \contentsline {chapter}{Bibliography}{51}{subsection.4.0.2}
-\contentsline {chapter}{\numberline {A}Appendices}{53}{appendix.A}
-\contentsline {section}{\numberline {A.1}VNT Evaluation Method}{53}{section.A.1}
-\contentsline {subsection}{\numberline {A.1.1}Calculating the Number of Vulnerabilities}{53}{subsection.A.1.1}
