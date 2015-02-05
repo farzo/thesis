@@ -20,66 +20,69 @@
 \contentsline {section}{\numberline {1.6}Project Objectives}{10}{section.1.6}
 \contentsline {chapter}{\numberline {2}Vulnerability Notification Tool}{11}{chapter.2}
 \contentsline {section}{\numberline {2.1}Motivation}{11}{section.2.1}
+\contentsline {paragraph}{}{12}{section*.11}
 \contentsline {section}{\numberline {2.2}Source Evaluation}{12}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Approach}{12}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Vulnerability Sources}{13}{subsection.2.2.2}
-\contentsline {paragraph}{Completeness and Speed}{14}{section*.11}
-\contentsline {paragraph}{Information Quality}{15}{section*.12}
-\contentsline {paragraph}{Parsable Feed and Cost}{15}{section*.13}
+\contentsline {paragraph}{Completeness and Speed}{14}{section*.12}
+\contentsline {paragraph}{Information Quality}{15}{section*.13}
+\contentsline {paragraph}{Parsable Feed and Cost}{15}{section*.14}
 \contentsline {subsection}{\numberline {2.2.3}Conclusion}{16}{subsection.2.2.3}
-\contentsline {paragraph}{}{16}{section*.14}
-\contentsline {paragraph}{}{17}{section*.15}
-\contentsline {section}{\numberline {2.3}National Vulnerability Database}{17}{section.2.3}
+\contentsline {paragraph}{}{16}{section*.15}
+\contentsline {paragraph}{}{16}{section*.16}
+\contentsline {section}{\numberline {2.3}National Vulnerability Database}{16}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Data Feeds}{17}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Challenges}{17}{subsection.2.3.2}
-\contentsline {subsubsection}{Downloading}{17}{section*.16}
-\contentsline {subsubsection}{Modification Date}{18}{section*.17}
+\contentsline {subsubsection}{Downloading}{17}{section*.17}
 \contentsline {paragraph}{}{18}{section*.18}
-\contentsline {paragraph}{}{18}{section*.19}
-\contentsline {paragraph}{}{19}{section*.20}
-\contentsline {subsubsection}{Vulnerable Configuration}{19}{section*.21}
+\contentsline {subsubsection}{Modification Date}{18}{section*.19}
+\contentsline {paragraph}{}{18}{section*.20}
+\contentsline {paragraph}{}{18}{section*.21}
+\contentsline {paragraph}{}{19}{section*.22}
+\contentsline {subsubsection}{Vulnerable Configuration}{19}{section*.23}
 \contentsline {section}{\numberline {2.4}Product Name Matching}{19}{section.2.4}
-\contentsline {subsubsection}{Common Platform Enumerations}{19}{section*.22}
-\contentsline {subsubsection}{WAD Product Names}{20}{section*.23}
+\contentsline {subsubsection}{Common Platform Enumerations}{19}{section*.24}
+\contentsline {subsubsection}{WAD Product Names}{20}{section*.25}
 \contentsline {subsection}{\numberline {2.4.1}Approach}{20}{subsection.2.4.1}
-\contentsline {subsubsection}{Challenges}{21}{section*.24}
-\contentsline {paragraph}{}{21}{section*.25}
-\contentsline {subsection}{\numberline {2.4.2}Algorithm}{22}{subsection.2.4.2}
-\contentsline {paragraph}{}{22}{section*.26}
-\contentsline {subsection}{\numberline {2.4.3}Evaluation}{22}{subsection.2.4.3}
-\contentsline {subsubsection}{False Positives}{22}{section*.27}
-\contentsline {subsubsection}{False Negatives}{24}{section*.28}
-\contentsline {paragraph}{}{24}{section*.29}
+\contentsline {subsubsection}{Challenges}{21}{section*.26}
+\contentsline {paragraph}{}{21}{section*.27}
+\contentsline {subsection}{\numberline {2.4.2}Algorithm}{21}{subsection.2.4.2}
+\contentsline {paragraph}{}{22}{section*.28}
+\contentsline {subsection}{\numberline {2.4.3}Evaluation}{23}{subsection.2.4.3}
+\contentsline {subsubsection}{False Positives}{23}{section*.29}
+\contentsline {subsubsection}{False Negatives}{23}{section*.30}
+\contentsline {paragraph}{}{24}{section*.31}
 \contentsline {section}{\numberline {2.5}Vulnerable Resources}{24}{section.2.5}
 \contentsline {section}{\numberline {2.6}Output and Notifications}{24}{section.2.6}
-\contentsline {section}{\numberline {2.7}Results}{25}{section.2.7}
-\contentsline {paragraph}{}{25}{section*.30}
-\contentsline {paragraph}{}{26}{section*.31}
-\contentsline {paragraph}{}{27}{section*.32}
+\contentsline {section}{\numberline {2.7}Results}{24}{section.2.7}
+\contentsline {paragraph}{}{25}{section*.32}
+\contentsline {paragraph}{}{26}{section*.33}
+\contentsline {paragraph}{}{26}{section*.34}
+\contentsline {paragraph}{}{28}{section*.35}
 \contentsline {chapter}{\numberline {3}Scanner}{31}{chapter.3}
 \contentsline {section}{\numberline {3.1}Motivation}{31}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Use Cases}{33}{subsection.3.1.1}
 \contentsline {section}{\numberline {3.2}Scanner Specifications}{33}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Plugin Specifications}{33}{subsection.3.2.1}
-\contentsline {subsubsection}{Resource Types}{33}{section*.33}
-\contentsline {subsubsection}{Input}{34}{section*.34}
-\contentsline {subsubsection}{Output}{34}{section*.35}
+\contentsline {subsubsection}{Resource Types}{33}{section*.36}
+\contentsline {subsubsection}{Input}{34}{section*.37}
+\contentsline {subsubsection}{Output}{34}{section*.38}
 \contentsline {subsection}{\numberline {3.2.2}Scanner Options}{35}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Targets}{37}{subsection.3.2.3}
-\contentsline {subsubsection}{Example}{37}{section*.36}
+\contentsline {subsubsection}{Example}{37}{section*.39}
 \contentsline {subsection}{\numberline {3.2.4}Output}{39}{subsection.3.2.4}
-\contentsline {subsubsection}{Examples}{39}{section*.37}
+\contentsline {subsubsection}{Examples}{39}{section*.40}
 \contentsline {section}{\numberline {3.3}Conclusion}{41}{section.3.3}
-\contentsline {paragraph}{}{41}{section*.38}
+\contentsline {paragraph}{}{41}{section*.41}
 \contentsline {chapter}{\numberline {4}Conclusion and Future Work}{42}{chapter.4}
 \contentsline {subsection}{\numberline {4.0.1}Vulnerability Notification Tool}{42}{subsection.4.0.1}
-\contentsline {paragraph}{}{43}{section*.39}
-\contentsline {paragraph}{}{43}{section*.40}
-\contentsline {paragraph}{}{43}{section*.41}
 \contentsline {paragraph}{}{43}{section*.42}
-\contentsline {paragraph}{}{44}{section*.43}
-\contentsline {paragraph}{}{44}{section*.44}
-\contentsline {paragraph}{}{44}{section*.45}
+\contentsline {paragraph}{}{43}{section*.43}
+\contentsline {paragraph}{}{43}{section*.44}
+\contentsline {paragraph}{}{43}{section*.45}
+\contentsline {paragraph}{}{44}{section*.46}
+\contentsline {paragraph}{}{44}{section*.47}
+\contentsline {paragraph}{}{44}{section*.48}
 \contentsline {subsection}{\numberline {4.0.2}Scanner}{44}{subsection.4.0.2}
 \contentsline {chapter}{Bibliography}{46}{subsection.4.0.2}
 \contentsline {chapter}{\numberline {A}Appendices}{47}{appendix.A}
