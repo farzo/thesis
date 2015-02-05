@@ -1,5 +1,5 @@
 %\documentclass[12pt, a4paper, oneside]{book}
-\documentclass[12pt, a4paper, titlepage, twoside]{book}
+\documentclass[12pt, a4paper, titlepage, oneside]{book}
 %\documentclass[a4paper,11pt,twoside]{report}
 % TODO: should I change it to report? what is twoside?
 \usepackage[latin1]{inputenc}
@@ -35,7 +35,7 @@
 %\usepackage{amsmath}
 %\usepackage{algorithm}
 %\usepackage[noend]{algpseudocode}
-
+\usepackage{setspace}
 
 % Uncomment to show frames
 %\usepackage{showframe}
@@ -118,9 +118,11 @@
 
 %\end{titlepage}
 
-
+\include{acknowledgements}
+\include{abstract}
 %% start the show...
 % TODO: I'd rather start it after the table
+
 \pagenumbering{roman}
 \setcounter{page}{1}
 \pagenumbering{arabic}
@@ -130,8 +132,8 @@
 %\listoffigures
 %\listoftables
 
-\include{abstract}
-\include{acknowledgements}
+
+
 \include{chap1-introduction}
 %\include{chap2-CERN-web-landscape}
 %\include{chap3-vulnerability-detection}
