@@ -37,9 +37,9 @@
 \BOOKMARK [2][-]{subsection.3.2.4}{Output}{section.3.2}% 37
 \BOOKMARK [1][-]{section.3.3}{Conclusion}{chapter.3}% 38
 \BOOKMARK [0][-]{chapter.4}{Conclusion and Future Work}{}% 39
-\BOOKMARK [1][-]{subsection.4.0.1}{Vulnerability Notification Tool}{chapter.4}% 40
-\BOOKMARK [2][-]{subsection.4.0.2}{Scanner}{subsection.4.0.1}% 41
-\BOOKMARK [0][-]{subsection.4.0.2}{Bibliography}{}% 42
+\BOOKMARK [1][-]{section.4.1}{Vulnerability Notification Tool}{chapter.4}% 40
+\BOOKMARK [1][-]{section.4.2}{Scanner}{chapter.4}% 41
+\BOOKMARK [0][-]{section.4.2}{Bibliography}{}% 42
 \BOOKMARK [0][-]{appendix.A}{Appendices}{}% 43
 \BOOKMARK [1][-]{section.A.1}{VNT Evaluation Method}{appendix.A}% 44
 \BOOKMARK [2][-]{subsection.A.1.1}{Calculating the Number of Vulnerabilities}{section.A.1}% 45
