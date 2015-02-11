@@ -55,7 +55,7 @@ $ cat *.txt| grep -f wad_names_at_cern.txt|\
 \section{Vulnerability Notification Tool}
 
 Figure \ref{figure:vnt-internal-arch} illustrates the internal architecture of VNT. 
-As you can see there are 2 classes and four scripts in the tool. Class Vulnerability represents vulnerabilities with all their NVD reported fields. 
+There are 2 classes and four scripts in the tool. Class Vulnerability represents vulnerabilities with all their NVD reported fields. 
 Class Product takes care of everything that is related to CPE names. The main method in this class is the \texttt{guess\_wad\_names()} method which implements the mapping algorithm. 
 Different mapping algorithms were tested and all of them are implemented in this class, however the best one was chosen to be called when mapping was necessary. \texttt{vnt-init.sh} is a shell script that can be used to initialize the tool when it is being deployed on a new machine. This script downloads yearly feeds from NVD and stores all the vulnerability data, so that in future executions, the tool can discover new or updated vulnerabilities. \texttt{send-notification.sh} is the main script of the tool, in the sense that it uses both main components of VNT (VNT\_CORE and VNT\_EMAIL) to download the feeds and report vulnerabilities.
 \paragraph{}
@@ -73,7 +73,7 @@ Python 2.6 was used as the main programming language for this project (except fo
 Figure \ref{figure:scanner-internal-arch} illustrates the internal architecture of the Scanner. The Scanner is using 4 main Python classes to represent targets, plugins, plugins output and scan results. \texttt{scanner.py} is the main script of the tool to execute when scanning targets. The Scanner is dependent on the available plugins. In order to be able to test the Scanner, it was necessary to develop some plugins or modify the existing ones to follow the Scanner conventions. For this purpose, the plugin \texttt{landing\_page.py} for both websites and servers and \texttt{weak\_cipher.py} for web servers were modified. Also, two other plugins (\texttt{detect\_ssl2.py} and \texttt{detect\_ssl3.py}) were developed by other members of the CERN Computer Security Team to detect if a server is using SSL version 2 or 3 and these scripts were used to test the Scanner.
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=1.0\textwidth]{scanner-internal-arch}
+    \includegraphics{scanner-internal-arch}
   \caption{Scanner Internal Architecture}
    \label{figure:scanner-internal-arch}
 \end{figure}
