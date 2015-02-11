@@ -59,7 +59,7 @@ As you can see there are 2 classes and four scripts in the tool. Class Vulnerabi
 Class Product takes care of everything that is related to CPE names. The main method in this class is the \texttt{guess\_wad\_names()} method which implements the mapping algorithm. 
 Different mapping algorithms were tested and all of them are implemented in this class, however the best one was chosen to be called when mapping was necessary. \texttt{vnt-init.sh} is a shell script that can be used to initialize the tool when it is being deployed on a new machine. This script downloads yearly feeds from NVD and stores all the vulnerability data, so that in future executions, the tool can discover new or updated vulnerabilities. \texttt{send-notification.sh} is the main script of the tool, in the sense that it uses both main components of VNT (VNT\_CORE and VNT\_EMAIL) to download the feeds and report vulnerabilities.
 \paragraph{}
-VNT needs to have WAD names (apps.txt) to match CPE names to WAD names and WAD findings at CERN (wad_finidings_cern.txt) to filter out the irrelevant vulnerabilities. These two text files were generated using WAD. 
+VNT needs to have WAD names (apps.txt) to match CPE names to WAD names and WAD findings at CERN (wad\_finidings\_cern.txt) to filter out the irrelevant vulnerabilities. These two text files were generated using WAD. 
 \begin{figure}[h!]
   \centering
     \includegraphics[width=1.0\textwidth]{vnt-internal-arch}
@@ -77,3 +77,5 @@ Figure \ref{figure:scanner-internal-arch} illustrates the internal architecture 
   \caption{Scanner Internal Architecture}
    \label{figure:scanner-internal-arch}
 \end{figure}
+\paragraph{}
+Python 2.6 was used as the main programming language for this project and a total of 977 lines of code were developed for this tool (without considering the plugins). 
