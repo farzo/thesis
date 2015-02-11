@@ -1,7 +1,7 @@
 \chapter{VNT Evaluation Method}
 \label{vnt_evaluation_method}
 Once we have the output of the tool in JSON format, it is easy to convert it to other formats to do an analysis of the results or obtain some statistics. 
-\subsection{Calculating the Number of Vulnerabilities}
+\section{Calculating the Number of Vulnerabilities}
 The python script \texttt{vnt\_format.py} receives the JSON description of VNT results as an input and generates an output in text format describing each vulnerability in one line. This text output can be used by various command line tools, such as grep, cut, etc., to obtain statistics. 
 Each line is in the following format:
 \begin{framed}
@@ -60,7 +60,7 @@ Class Product takes care of everything that is related to CPE names. The main me
 Different mapping algorithms were tested and all of them are implemented in this class, however the best one was chosen to be called when mapping was necessary. \texttt{vnt-init.sh} is a shell script that can be used to initialize the tool when it is being deployed on a new machine. This script downloads yearly feeds from NVD and stores all the vulnerability data, so that in future executions, the tool can discover new or updated vulnerabilities. \texttt{send-notification.sh} is the main script of the tool, in the sense that it uses both main components of VNT (VNT\_CORE and VNT\_EMAIL) to download the feeds and report vulnerabilities.
 \paragraph{}
 VNT needs to have WAD names (apps.txt) to match CPE names to WAD names and WAD findings at CERN (wad\_finidings\_cern.txt) to filter out the irrelevant vulnerabilities. These two text files were generated using WAD. 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
     \includegraphics[width=1.0\textwidth]{vnt-internal-arch}
   \caption{VNT Internal Architecture}
@@ -78,4 +78,4 @@ Figure \ref{figure:scanner-internal-arch} illustrates the internal architecture 
    \label{figure:scanner-internal-arch}
 \end{figure}
 \paragraph{}
-Python 2.6 was used as the main programming language for this project and a total of 977 lines of code were developed for this tool (without considering the plugins). 
+In total, the Scanner contains 977 lines of Python code (without considering the plugins). 
