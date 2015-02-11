@@ -86,12 +86,16 @@
 \contentsline {paragraph}{}{46}{section*.49}
 \contentsline {paragraph}{}{46}{section*.50}
 \contentsline {paragraph}{}{46}{section*.51}
-\contentsline {paragraph}{}{46}{section*.52}
+\contentsline {paragraph}{}{47}{section*.52}
 \contentsline {paragraph}{}{47}{section*.53}
 \contentsline {paragraph}{}{47}{section*.54}
-\contentsline {paragraph}{}{47}{section*.55}
+\contentsline {paragraph}{}{48}{section*.55}
 \contentsline {section}{\numberline {4.2}Scanner}{48}{section.4.2}
-\contentsline {chapter}{Bibliography}{49}{section.4.2}
-\contentsline {chapter}{\numberline {A}Appendices}{50}{appendix.A}
-\contentsline {section}{\numberline {A.1}VNT Evaluation Method}{50}{section.A.1}
-\contentsline {subsection}{\numberline {A.1.1}Calculating the Number of Vulnerabilities}{50}{subsection.A.1.1}
+\contentsline {paragraph}{}{48}{section*.56}
+\contentsline {chapter}{Bibliography}{49}{section*.56}
+\contentsline {chapter}{\numberline {A}VNT Evaluation Method}{50}{appendix.A}
+\contentsline {subsection}{\numberline {A.0.1}Calculating the Number of Vulnerabilities}{50}{subsection.A.0.1}
+\contentsline {chapter}{\numberline {B}Implementation Details}{52}{appendix.B}
+\contentsline {section}{\numberline {B.1}Vulnerability Notification Tool}{52}{section.B.1}
+\contentsline {paragraph}{}{52}{section*.58}
+\contentsline {paragraph}{}{52}{section*.59}
