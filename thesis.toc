@@ -86,9 +86,10 @@
 \contentsline {paragraph}{}{46}{section*.49}
 \contentsline {paragraph}{}{46}{section*.50}
 \contentsline {paragraph}{}{46}{section*.51}
-\contentsline {paragraph}{}{47}{section*.52}
+\contentsline {paragraph}{}{46}{section*.52}
 \contentsline {paragraph}{}{47}{section*.53}
 \contentsline {paragraph}{}{47}{section*.54}
+\contentsline {paragraph}{}{47}{section*.55}
 \contentsline {section}{\numberline {4.2}Scanner}{48}{section.4.2}
 \contentsline {chapter}{Bibliography}{49}{section.4.2}
 \contentsline {chapter}{\numberline {A}Appendices}{50}{appendix.A}
