@@ -41,7 +41,7 @@ The Scanner runs a set of security tests (called plugins) on a single resource, 
 A plugin is a single security test for a given type of resource. After scanning a target, it says if a security problem was found or not (it can output more details when relevant). Detection scripts described in section \ref{sec:tools} are examples of plugins.
 %delam gerefte ey doost, havaye gerye ba man...havaye gerye ba man...
 \subsubsection{Resource Types}
-There are various types of resources at CERN. In most cases the plugins need to scan websites or web servers (or other devices), but our implementation of the Scanner is independent of the type of the resource that is being scanned. If a plugin scans more than one resource type, depending on the type of the resource, it will require different inputs and consequently it needs to be executed differently. The Scanner, on the other hand, is the tool that executes the plugins. Therefore, it needs to be configured to execute the same plugin in different ways depending on the resource type. To avoid complexity, a given plugin should deal with only one type of resource. Occasionally, the same test will need to be developed for different types of resources (e.g. the default landing page test is needed for both web sites and web servers). In that case, the logic of the test should be shared, but still separate scripts should be developed for each resource type. For example, imagine that the script \texttt{landing\_page.py} contains the logic for testing for a default landing page on websites and web servers. A possible implementation is to develop one script for websites (\texttt{landing\_page\_site.sh}) that runs `\texttt{./landing\_page.py -site \$1}' and one script for web servers (\texttt{landing\_page\_server.sh}) that runs `\texttt{./landing\_page.py -server \$1}' 
+There are various types of resources at CERN. In most cases the plugins need to scan websites or web servers (or other devices), but our implementation of the Scanner is independent of the type of the resource that is being scanned. If a plugin scans more than one resource type, depending on the type of the resource, it will require different inputs and consequently it needs to be executed differently. The Scanner, on the other hand, is the tool that executes the plugins. Therefore, it needs to be configured to execute the same plugin in different ways depending on the resource type. To avoid complexity or ambiguity, a given plugin should deal with only one type of resource. Occasionally, the same test will need to be developed for different types of resources (e.g. the default landing page test is needed for both web sites and web servers). In that case, the logic of the test should be shared, but still separate scripts should be developed for each resource type. For example, imagine that the script \texttt{landing\_page.py} contains the logic for testing for a default landing page on websites and web servers. A possible implementation is to develop one script for websites (\texttt{landing\_page\_site.sh}) that runs `\texttt{./landing\_page.py -site \$1}' and one script for web servers (\texttt{landing\_page\_server.sh}) that runs `\texttt{./landing\_page.py -server \$1}' 
 \subsubsection{Input}
 The Scanner provides the plugin with inputs it should process. Depending on the nature of the security test a plugin is performing, it needs different input data. It is important that all plugins follow a convention about the way they receive inputs, so that the Scanner can run all the plugins in the same way. A plugin can assume that it is going to receive the input in the following order: \{\texttt{IP/HostName PORT ALIAS URL}\} for web servers/devices and \{\texttt{URL}\} for websites. The plugin can decide to ignore any of these input arguments, if irrelevant. Also, the Scanner might pass an empty string if the user does not specify a field.
 Additionally, plugins can be called with the following arguments instead of the target resource:
@@ -293,7 +293,7 @@ The following command checks if the device uses SSL3\footnote{SSL version 3 is v
 
 
 \$ \texttt{./scanner.py} & \texttt{-{}-plugin detect\_ssl3.py } \\
-  & \texttt{-{}-device lcg-argus} \\
+  & \texttt{-{}-device PCITDI86} \\
   & \texttt{-{}-port 443,8443}    	       
 	\end{tabular}    
 
@@ -306,10 +306,10 @@ The output of the scan is:
 \#resource\_type;resource\_name;test\_name;result;notes;target}
 \\
 \\
-\texttt{device;lcg-argus;detect\_ssl3;VULNERABLE;SSLv3 is enabled on lcg-argus:443;[lcg-argus:443]}
+\texttt{device;PCITDI86;detect\_ssl3;VULNERABLE;SSLv3 is enabled on PCITDI86:443;[PCITDI86:443]}
 \\
 \\
-\texttt{device;lcg-argus;detect\_ssl3;VULNERABLE;SSLv3 is enabled on lcg-argus:8443;[lcg-argus:8443]}
+\texttt{device;PCITDI86;detect\_ssl3;VULNERABLE;SSLv3 is enabled on PCITDI86:8443;[PCITDI86:8443]}
 \\
 \\
 As one can see, for each scan a different result line is printed, because the plugin reports the device name and port in the notes. 
